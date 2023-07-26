@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    float horizontal; 
-    float acceleration = 1f;
-    float deceleration = 1f;
+    float horizontal;
+    [SerializeField] float acceleration = 1f;
+    [SerializeField] float deceleration = 1f;
     string horizontalAxis;
     new Rigidbody2D rigidbody2D;
 

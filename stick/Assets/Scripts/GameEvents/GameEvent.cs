@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameEvent : ScriptableObject
 {
     HashSet<GameEventListener> gameEventListeners = new HashSet<GameEventListener>();
-    
+
     static HashSet<GameEvent> listenedEvents = new HashSet<GameEvent>();
 
     public void Register(GameEventListener gameEventListener)
@@ -18,7 +18,7 @@ public class GameEvent : ScriptableObject
     public void Deregister(GameEventListener gameEventListener)
     {
         gameEventListeners.Remove(gameEventListener);
-        if(gameEventListener!= null )
+        if (gameEventListener != null)
         {
             listenedEvents.Remove(this);
         }
@@ -27,17 +27,17 @@ public class GameEvent : ScriptableObject
     [ContextMenu("Invoke")]
     public void Invoke()
     {
-        foreach(var gameEventListener in gameEventListeners) 
+        foreach (var gameEventListener in gameEventListeners)
         {
             gameEventListener.RaiseEvent();
         }
     }
 
-    public static void RaiseEvent(string eventName) 
+    public static void RaiseEvent(string eventName)
     {
-        foreach(var gameEvent in listenedEvents) 
+        foreach (var gameEvent in listenedEvents)
         {
-            if(gameEvent.name == eventName)
+            if (gameEvent.name == eventName)
             {
                 gameEvent.Invoke();
             }
