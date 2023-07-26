@@ -21,7 +21,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         ReadHorizontalInput();
-        MoveHorizontal();
+        if (horizontal != 0)
+            MoveHorizontal();
 
         void ReadHorizontalInput()
         {
