@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class InspectionManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    static Inspectable currentInspectable; 
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey(KeyCode.E)) 
+        {
+            currentInspectable = Inspectable.InspectablesInRange.FirstOrDefault();
+        }
+        if(Input.GetKey(KeyCode.E) && currentInspectable != null) 
+        {
+            Debug.Log("inspected!");
+            currentInspectable.CompleteInspection();
+        }
+        else
+        {
+            currentInspectable = null;
+        }
     }
 }

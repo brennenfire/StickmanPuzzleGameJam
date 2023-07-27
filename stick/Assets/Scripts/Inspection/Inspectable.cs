@@ -21,6 +21,7 @@ public class Inspectable : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            Debug.Log("he here....");
             inspectablesInRange.Add(this);
             InspectablesInRangeChanged?.Invoke(true);
         }
@@ -37,18 +38,21 @@ public class Inspectable : MonoBehaviour
         }
     }
 
-    void CompleteInspection()
+    public void CompleteInspection()
     {
+        Debug.Log("inspection wokr!!!");
         inspectablesInRange.Remove(this);
         InspectablesInRangeChanged?.Invoke(inspectablesInRange.Any());
         OnInspectionCompleted?.Invoke();
         AnyInspectionComplete?.Invoke(this, completedInspectionText);
     }
 
+    /*
     void RestoreInspectionText()
     {
         inspectablesInRange.Remove(this);
         InspectablesInRangeChanged?.Invoke(inspectablesInRange.Any());
         OnInspectionCompleted?.Invoke();
     }
+    */
 }
