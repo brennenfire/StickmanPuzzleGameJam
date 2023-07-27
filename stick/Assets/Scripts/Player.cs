@@ -27,6 +27,11 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        Movement();
+    }
+
+    void Movement()
+    {
         if (horizontalMovement != 0)
         {
             animator.SetFloat("RunningSpeed", 1f);
@@ -38,7 +43,6 @@ public class Player : MonoBehaviour
             animator.SetFloat("RunningSpeed", -1f);
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
-
     }
 
     void Flip()
