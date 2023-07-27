@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,6 +14,7 @@ public class Inspectable : MonoBehaviour
     static HashSet<Inspectable> inspectablesInRange = new HashSet<Inspectable>();
 
     [SerializeField, TextArea] string completedInspectionText;
+    [SerializeField] TMP_Text completedInspectionTextBox;
     [SerializeField] UnityEvent OnInspectionCompleted;
 
     public static IReadOnlyCollection<Inspectable> InspectablesInRange => inspectablesInRange;
@@ -44,7 +46,8 @@ public class Inspectable : MonoBehaviour
         inspectablesInRange.Remove(this);
         InspectablesInRangeChanged?.Invoke(inspectablesInRange.Any());
         OnInspectionCompleted?.Invoke();
-        AnyInspectionComplete?.Invoke(this, completedInspectionText);
+        //AnyInspectionComplete?.Invoke(this, completedInspectionText);
+        completedInspectionTextBox.text = completedInspectionText;  
     }
 
     /*
