@@ -34,13 +34,14 @@ public class Player : MonoBehaviour
     {
         if (horizontalMovement != 0)
         {
-            animator.SetFloat("RunningSpeed", 1f);
+            animator.SetFloat("RunningSpeed", 5f);
             float newHorizontal = Mathf.Lerp(rb.velocity.x, horizontalMovement * speed, Time.fixedDeltaTime * 2f);
             rb.velocity = new Vector2(newHorizontal, rb.velocity.y);
         }
         else
         {
-            animator.SetFloat("RunningSpeed", -1f);
+            animator.StopPlayback();
+            animator.SetFloat("RunningSpeed", -5f);
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
