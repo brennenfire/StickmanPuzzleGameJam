@@ -47,7 +47,7 @@ public class Inspectable : MonoBehaviour
         InspectablesInRangeChanged?.Invoke(inspectablesInRange.Any());
         OnInspectionCompleted?.Invoke();
         //AnyInspectionComplete?.Invoke(this, completedInspectionText);
-        completedInspectionTextBox.SetText(completedInspectionText);
+        completedInspectionTextBox?.SetText(completedInspectionText);
         completedInspectionTextBox.enabled = true;
         float messageTime = completedInspectionText.Length / 5;
         messageTime = Mathf.Clamp(messageTime, 3f, 15f);
