@@ -6,6 +6,8 @@ public class LeverSwing : MonoBehaviour
     HashSet<Player> playerInRange = new HashSet<Player>();
     Animator animator;
 
+    bool down;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -27,6 +29,18 @@ public class LeverSwing : MonoBehaviour
     {
         if (playerInRange.Count > 0)
             if (Input.GetKeyDown(KeyCode.E))
-                animator.Play("Lever Swing");
+            {
+                if(down == false)
+                {
+                    animator.SetTrigger("SwingDown");
+                    down = !down;
+                }
+                else
+                {
+                    animator.SetTrigger("SwingUp");
+                    down = !down;
+                }
+                
+            }
     }
 }
