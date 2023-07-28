@@ -9,7 +9,7 @@ using UnityEngine.Events;
 public class Inspectable : MonoBehaviour
 {
     public static event Action<bool> InspectablesInRangeChanged;
-    public static event Action<Inspectable, string> AnyInspectionComplete;
+    //public static event Action<Inspectable, string> AnyInspectionComplete;
 
     static HashSet<Inspectable> inspectablesInRange = new HashSet<Inspectable>();
 
@@ -47,7 +47,23 @@ public class Inspectable : MonoBehaviour
         InspectablesInRangeChanged?.Invoke(inspectablesInRange.Any());
         OnInspectionCompleted?.Invoke();
         //AnyInspectionComplete?.Invoke(this, completedInspectionText);
-        completedInspectionTextBox.text = completedInspectionText;  
+        completedInspectionTextBox.SetText(completedInspectionText);
+        completedInspectionTextBox.enabled = true;
+        float messageTime = completedInspectionText.Length / 5;
+        messageTime = Mathf.Clamp(messageTime, 3f, 15f);
+        StartCoroutine(FadeCompletedText(messageTime));
+    }
+
+    IEnumerator FadeCompletedText(float messageTime)
+    {
+        completedInspectionTextBox.alpha = 1f;
+        while(completedInspectionTextBox.alpha > 0f)
+        {
+            yield return null;
+            completedInspectionTextBox.alpha -= Time.deltaTime / messageTime;
+        }
+
+        completedInspectionTextBox.enabled = false;
     }
 
     /*
