@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class GamePersistence : MonoBehaviour
@@ -8,28 +7,28 @@ public class GamePersistence : MonoBehaviour
 
     void Start()
     {
-        LoadGame();    
+        LoadGame();
     }
 
     void OnDisable()
     {
-        SaveGame();    
+        SaveGame();
     }
 
     void SaveGame()
     {
-        Debug.Log("SAVEEEEEEEEEEEEE");
+        Debug.Log("Saving Game Data");
         var json = JsonUtility.ToJson(gameData);
         PlayerPrefs.SetString("GameData", json);
         Debug.Log(json);
-        Debug.Log("the save completion is done!");
+        Debug.Log("Saving Game Data Complete");
     }
 
     void LoadGame()
     {
         var json = PlayerPrefs.GetString("GameData");
         gameData = JsonUtility.FromJson<GameData>(json);
-        if(gameData == null)
+        if (gameData == null)
         {
             gameData = new GameData();
         }

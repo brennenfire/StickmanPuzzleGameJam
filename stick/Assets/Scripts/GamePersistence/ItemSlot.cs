@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using UnityEngine;
 
 [Serializable]
@@ -23,10 +24,10 @@ public class ItemSlot
     }
 }
 
+
 [Serializable]
 public class SlotData
 {
     public string SlotName;
     public string ItemName;
 }
-
