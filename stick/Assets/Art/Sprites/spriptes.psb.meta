@@ -94,6 +94,27 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
+  - name: Lamppost
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2059
+      width: 416
+      height: 893
+    spriteID: 10df5f236ff9ed948873bc4846dbc71d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2059}
+    spritePosition: {x: 1399, y: 9}
   - name: Painting 2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -114,7 +135,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 1587, y: 4}
-    spritePosition: {x: 733, y: 1041}
+    spritePosition: {x: 424, y: 721}
   - name: Painting 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -135,28 +156,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 1587, y: 375}
-    spritePosition: {x: 189, y: 1067}
-  - name: Shop
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 842
-      width: 669
-      height: 1223
-    spriteID: cc6e2ed7c11c6164aa5b6ce6d3ecb172
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 842}
-    spritePosition: {x: 1431, y: 29}
+    spritePosition: {x: 0, y: 695}
   - name: Sign
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -165,7 +165,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 2073
+      y: 2960
       width: 293
       height: 398
     spriteID: f2b60bcc5fe9a9243be3744a65f78236
@@ -176,8 +176,29 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 2073}
-    spritePosition: {x: 1300, y: 0}
+    uvTransform: {x: 4, y: 2960}
+    spritePosition: {x: 901, y: 0}
+  - name: Shop
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 841
+      width: 669
+      height: 1223
+    spriteID: cc6e2ed7c11c6164aa5b6ce6d3ecb172
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 841}
+    spritePosition: {x: 803, y: 0}
   - name: PlayerHouse
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -198,7 +219,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 521, y: 0}
+    spritePosition: {x: 0, y: 0}
   characterData:
     bones: []
     parts: []
@@ -233,6 +254,16 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: Lamppost
+    spriteName: Lamppost
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 10df5f236ff9ed948873bc4846dbc71d
+    layerID: 18
+    mosaicPosition: {x: 4, y: 2059}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Painting 2
     spriteName: Painting 2
     isGroup: 0
@@ -253,23 +284,23 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Shop
-    spriteName: Shop
-    isGroup: 0
-    parentIndex: -1
-    spriteID: cc6e2ed7c11c6164aa5b6ce6d3ecb172
-    layerID: 10
-    mosaicPosition: {x: 4, y: 842}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
   - name: Sign
     spriteName: Sign
     isGroup: 0
     parentIndex: -1
     spriteID: f2b60bcc5fe9a9243be3744a65f78236
     layerID: 9
-    mosaicPosition: {x: 4, y: 2073}
+    mosaicPosition: {x: 4, y: 2960}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Shop
+    spriteName: Shop
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cc6e2ed7c11c6164aa5b6ce6d3ecb172
+    layerID: 10
+    mosaicPosition: {x: 4, y: 841}
     flatten: 0
     isImported: 1
     isVisible: 1

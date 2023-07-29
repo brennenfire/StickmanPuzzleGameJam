@@ -6,27 +6,32 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] float speed;
+    [SerializeField] GameObject cameraFollowGO;
 
     Animator animator;
     Rigidbody2D rb;
+    CameraFollowObject cameraFollowObject;
 
     float horizontalMovement;
-    bool facingLeft = true;
+    public bool facingLeft = true;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+
+        cameraFollowObject = cameraFollowGO.GetComponent<CameraFollowObject>();
     }
 
     void Update()
     {
-        Flip();
         ReadHorizontalInput();
     }
 
     void FixedUpdate()
     {
+        if(horizontalMovement != 0)
+            TurnCheck();
         Movement();
     }
 
@@ -45,20 +50,36 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
-
-    void Flip()
-    {
-        if ((horizontalMovement > 0 && facingLeft) || (horizontalMovement < 0 && !facingLeft))
-        {
-            facingLeft = !facingLeft;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-        }
-    }
-
     void ReadHorizontalInput()
     {
         horizontalMovement = Input.GetAxisRaw("Horizontal");
+    }
+
+    void TurnCheck()
+    {
+        if (horizontalMovement > 0 && facingLeft)
+            Turn();
+        else if (horizontalMovement < 0 && !facingLeft)
+            Turn();
+    }
+
+    void Turn()
+    {
+        if (facingLeft)
+        {
+            Vector3 rotate = new Vector3(transform.rotation.x, 180f, transform.rotation.z);
+            transform.rotation = Quaternion.Euler(rotate);
+            facingLeft = !facingLeft;
+
+            cameraFollowObject.CallTurn();
+        }
+        else
+        {
+            Vector3 rotate = new Vector3(transform.rotation.x, 0f, transform.rotation.z);
+            transform.rotation = Quaternion.Euler(rotate);
+            facingLeft = !facingLeft;
+
+            cameraFollowObject.CallTurn();
+        }
     }
 }
