@@ -1,13 +1,14 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class Narrator : MonoBehaviour
 {
     public static Narrator Instance { get; private set;}
 
     [SerializeField] public Canvas NarratorCanvas;
-    [SerializeField] TMP_Text narratorText;
+    [SerializeField] public TMP_Text narratorText;
 
     void Awake()
     {
@@ -23,5 +24,10 @@ public class Narrator : MonoBehaviour
     public void EnableCanvas()
     {
         NarratorCanvas.enabled = true;
+    }
+
+    internal void DisableCanvas()
+    {
+        NarratorCanvas.enabled = false;
     }
 }

@@ -5,26 +5,47 @@ using UnityEngine;
 
 public class NarratorLines : MonoBehaviour
 {
-    [SerializeField, TextArea] List<string> lines;
+    [SerializeField, TextArea] string[] lines;
+
+    int index = 0;
+
+    Narrator narrator;
+    Collider2D collider;
+    
+    void Start()
+    {
+        narrator = Narrator.Instance;
+        collider = GetComponent<Collider2D>();
+    }
+
+    [ContextMenu("test dialogue")]
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        var player = collision.GetComponent<Player>();
-        if (player == null)
-        {
-            return;
-        }
-        Narrator.Instance.EnableCanvas();
-        foreach(var line in lines) 
-        {
-            Narrator.Instance.SetText(line);
-            StartCoroutine(WaitForNextLine());
-            //Destroy(gameObject);
-        }
+        collider.enabled = false;
+        TestDialogue();
+    }
+
+    void TestDialogue()
+    {
+        narrator.EnableCanvas();
+        narrator.SetText(lines[index]);
+        StartCoroutine(WaitForNextLine());
     }
 
     IEnumerator WaitForNextLine()
     {
         yield return new WaitForSeconds(3f);
+        if (index < lines.Length - 1)
+        {
+            index++;
+            narrator.SetText(lines[index]);
+            TestDialogue();
+        }
+        else
+        {
+            narrator.DisableCanvas();
+            Destroy(gameObject);
+        }
     }
 }
