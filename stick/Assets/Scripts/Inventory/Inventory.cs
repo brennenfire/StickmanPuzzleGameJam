@@ -23,18 +23,11 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    void CheckItems()
-    {
-        for (int i = GENERAL_SIZE - 1; i > 0; i--)
-        {
-            //GeneralSlots[i].Item.
-        }
-    }
-
     public void AddItem(Item item)
     {
         var firstAvailableSlot = GeneralSlots.FirstOrDefault(t => t.isEmpty);
         firstAvailableSlot.SetItem(item);
+        item.WasPickedUp = true;
     }
 
     [ContextMenu(nameof(AddDebugItem))]

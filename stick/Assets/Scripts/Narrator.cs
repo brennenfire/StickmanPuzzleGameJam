@@ -17,7 +17,7 @@ public class Narrator : MonoBehaviour
 
     public void SetText(string text)
     {
-        narratorText.text = text;
+        narratorText.SetText(text);
     }
 
     public void EnableCanvas()

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class NarratorLines : MonoBehaviour
@@ -16,7 +18,13 @@ public class NarratorLines : MonoBehaviour
         foreach(var line in lines) 
         {
             Narrator.Instance.SetText(line);
+            StartCoroutine(WaitForNextLine());
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator WaitForNextLine()
+    {
+        yield return new WaitForSeconds(3f);
     }
 }

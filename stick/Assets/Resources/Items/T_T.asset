@@ -15,3 +15,4 @@ MonoBehaviour:
   Icon: {fileID: 0}
   Name: hey
   Description: sadasweasd
+  WasPickedUp: 1
