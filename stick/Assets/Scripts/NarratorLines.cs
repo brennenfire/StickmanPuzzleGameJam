@@ -15,7 +15,8 @@ public class NarratorLines : MonoBehaviour
         Narrator.Instance.EnableCanvas();
         foreach(var line in lines) 
         {
-            Narrator.Instance.SetText(line); 
+            Narrator.Instance.SetText(line);
+            Destroy(gameObject);
         }
     }
 }
