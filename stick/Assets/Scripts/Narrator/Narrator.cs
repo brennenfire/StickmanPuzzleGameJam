@@ -24,5 +24,4 @@ public class Narrator : MonoBehaviour
     {
         NarratorCanvas.enabled = true;
     }
-
 }

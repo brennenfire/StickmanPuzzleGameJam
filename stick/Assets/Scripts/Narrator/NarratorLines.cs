@@ -19,7 +19,7 @@ public class NarratorLines : MonoBehaviour
         {
             Narrator.Instance.SetText(line);
             StartCoroutine(WaitForNextLine());
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
