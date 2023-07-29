@@ -13,9 +13,12 @@ public class Inspectable : MonoBehaviour
 
     static HashSet<Inspectable> inspectablesInRange = new HashSet<Inspectable>();
 
+    [SerializeField] UnityEvent OnInspectionCompleted;
+
     [SerializeField, TextArea] string completedInspectionText;
     [SerializeField] TMP_Text completedInspectionTextBox;
-    [SerializeField] UnityEvent OnInspectionCompleted;
+    [SerializeField] Item item;
+    [SerializeField] bool isPickup = false;
 
     public static IReadOnlyCollection<Inspectable> InspectablesInRange => inspectablesInRange;
 
@@ -42,7 +45,13 @@ public class Inspectable : MonoBehaviour
 
     public void CompleteInspection()
     {
-        Debug.Log("inspection wokr!!!");
+        if(isPickup)
+        {
+            Inventory.Instance.AddItem(item);
+            gameObject.SetActive(false);
+            return;
+        }
+        //Debug.Log("inspection wokr!!!");
         inspectablesInRange.Remove(this);
         InspectablesInRangeChanged?.Invoke(inspectablesInRange.Any());
         OnInspectionCompleted?.Invoke();

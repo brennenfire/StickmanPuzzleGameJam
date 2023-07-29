@@ -1,13 +1,28 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Narrator : MonoBehaviour
 {
-    
-}
+    public static Narrator Instance { get; private set;}
 
-public class NarratorLines
-{
-    [SerializeField, TextArea] List<string> lines;
+    [SerializeField] public Canvas NarratorCanvas;
+    [SerializeField] TMP_Text narratorText;
+
+    void Awake()
+    {
+        Instance = this;
+        NarratorCanvas.enabled = false;    
+    }
+
+    public void SetText(string text)
+    {
+        narratorText.text = text;
+    }
+
+    public void EnableCanvas()
+    {
+        NarratorCanvas.enabled = true;
+    }
+
 }
