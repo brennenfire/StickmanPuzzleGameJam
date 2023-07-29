@@ -2538,6 +2538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - hey man whats up
+  - FUCK YOU
 --- !u!61 &755141175
 BoxCollider2D:
   m_ObjectHideFlags: 0
