@@ -3,6 +3,7 @@ using UnityEngine;
 public class CameraFollowObject : MonoBehaviour
 {
     [SerializeField] Transform playerTransform;
+    [SerializeField] float cameraYoffset;
 
     Player player;
     bool facingLeft;
