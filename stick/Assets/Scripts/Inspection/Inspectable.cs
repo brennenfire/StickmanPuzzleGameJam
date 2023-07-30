@@ -22,6 +22,7 @@ public class Inspectable : MonoBehaviour
 
     public static IReadOnlyCollection<Inspectable> InspectablesInRange => inspectablesInRange;
 
+    /*
     void Awake()
     {
         if(PlayerPrefs.GetInt(item.name) == 1)
@@ -29,6 +30,7 @@ public class Inspectable : MonoBehaviour
             ItemCheck.Instance.DeactivateItem();
         }
     }
+    */
 
     void OnTriggerEnter2D(Collider2D collision)
     {
