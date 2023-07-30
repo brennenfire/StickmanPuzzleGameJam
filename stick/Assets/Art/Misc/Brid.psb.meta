@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0de90009559c47e4bb46b8e5002165ed
+guid: 066b56e7a0ea04447919654274f0fa9a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,49 +94,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Painting 2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1587
-      y: 4
-      width: 424
-      height: 363
-    spriteID: 457bda3bd63aa794c80f96f520b20c64
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1587, y: 4}
-    spritePosition: {x: 424, y: 721}
-  - name: Painting 1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 1587
-      y: 375
-      width: 424
-      height: 363
-    spriteID: caf7ef0175c69694f9a1a6277c40d0db
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1587, y: 375}
-    spritePosition: {x: 0, y: 695}
-  - name: Sign
+  - name: 3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -144,10 +102,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 2059
-      width: 293
-      height: 398
-    spriteID: f2b60bcc5fe9a9243be3744a65f78236
+      y: 173
+      width: 237
+      height: 150
+    spriteID: 43419c94234995c4197b98ea82643b92
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -155,9 +113,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 2059}
-    spritePosition: {x: 901, y: 0}
-  - name: Shop
+    uvTransform: {x: 4, y: 173}
+    spritePosition: {x: 45, y: 68}
+  - name: 2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -165,10 +123,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 841
-      width: 652
-      height: 1210
-    spriteID: 284abd09b5d243c4fbbc2880ef01edd1
+      y: 331
+      width: 237
+      height: 114
+    spriteID: 6aece1e324bb5a34f8d368743e553cf5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -176,9 +134,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 841}
-    spritePosition: {x: 788, y: 0}
-  - name: PlayerHouse
+    uvTransform: {x: 4, y: 331}
+    spritePosition: {x: 45, y: 143}
+  - name: Layer 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -187,9 +145,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 1575
-      height: 830
-    spriteID: effb7d522f095364b9f3936ef0cfa464
+      width: 237
+      height: 161
+    spriteID: 6637d7782a3426a4193124fba7000e9d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -198,7 +156,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 0, y: 0}
+    spritePosition: {x: 45, y: 138}
   characterData:
     bones: []
     parts: []
@@ -269,51 +227,31 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Painting 2
-    spriteName: Painting 2
+  - name: 3
+    spriteName: 3
     isGroup: 0
     parentIndex: -1
-    spriteID: 457bda3bd63aa794c80f96f520b20c64
-    layerID: 12
-    mosaicPosition: {x: 1587, y: 4}
+    spriteID: 43419c94234995c4197b98ea82643b92
+    layerID: 8
+    mosaicPosition: {x: 4, y: 173}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Painting 1
-    spriteName: Painting 1
+  - name: 2
+    spriteName: 2
     isGroup: 0
     parentIndex: -1
-    spriteID: caf7ef0175c69694f9a1a6277c40d0db
-    layerID: 11
-    mosaicPosition: {x: 1587, y: 375}
+    spriteID: 6aece1e324bb5a34f8d368743e553cf5
+    layerID: 3
+    mosaicPosition: {x: 4, y: 331}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Sign
-    spriteName: Sign
+  - name: Layer 1
+    spriteName: Layer 1
     isGroup: 0
     parentIndex: -1
-    spriteID: f2b60bcc5fe9a9243be3744a65f78236
-    layerID: 9
-    mosaicPosition: {x: 4, y: 2059}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Shop
-    spriteName: Shop
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 284abd09b5d243c4fbbc2880ef01edd1
-    layerID: 20
-    mosaicPosition: {x: 4, y: 841}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: PlayerHouse
-    spriteName: PlayerHouse
-    isGroup: 0
-    parentIndex: -1
-    spriteID: effb7d522f095364b9f3936ef0cfa464
+    spriteID: 6637d7782a3426a4193124fba7000e9d
     layerID: 2
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
