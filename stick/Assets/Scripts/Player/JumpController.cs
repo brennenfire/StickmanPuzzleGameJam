@@ -12,6 +12,7 @@ public class JumpController : MonoBehaviour
 
     Rigidbody2D rb;
     Vector2 vecGravity;
+    Animator anim;
 
     bool isJumping;
     float jumpCounter;
@@ -22,10 +23,14 @@ public class JumpController : MonoBehaviour
     {
         vecGravity = new Vector2(0, -Physics2D.gravity.y);
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
+        if (Input.GetButtonDown("Jump"))
+            anim.SetTrigger("Jump");
+        
         ReadJumpInput();
         DoJump();
         StopJump();
