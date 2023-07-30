@@ -1,10 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LeverSwing : MonoBehaviour
 {
     HashSet<Player> playerInRange = new HashSet<Player>();
     Animator animator;
+
+    [SerializeField] UnityEvent onDown;
+    [SerializeField] UnityEvent onUp;
 
     bool down;
 
@@ -34,11 +38,13 @@ public class LeverSwing : MonoBehaviour
                 {
                     animator.SetTrigger("SwingDown");
                     down = !down;
+                    onDown.Invoke();
                 }
                 else
                 {
                     animator.SetTrigger("SwingUp");
                     down = !down;
+                    onUp.Invoke();
                 }
                 
             }
