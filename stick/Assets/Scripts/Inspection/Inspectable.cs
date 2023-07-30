@@ -22,6 +22,14 @@ public class Inspectable : MonoBehaviour
 
     public static IReadOnlyCollection<Inspectable> InspectablesInRange => inspectablesInRange;
 
+    void Awake()
+    {
+        if(PlayerPrefs.GetInt(item.name) == 1)
+        {
+            ItemCheck.Instance.DeactivateItem();
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
@@ -45,8 +53,9 @@ public class Inspectable : MonoBehaviour
 
     public void CompleteInspection()
     {
-        if(isPickup)
+        if (isPickup)
         {
+            PlayerPrefs.SetInt(item.Name, 1);
             Inventory.Instance.AddItem(item);
             gameObject.SetActive(false);
             return;

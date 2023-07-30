@@ -27,7 +27,6 @@ public class Inventory : MonoBehaviour
     {
         var firstAvailableSlot = GeneralSlots.FirstOrDefault(t => t.isEmpty);
         firstAvailableSlot.SetItem(item);
-        item.WasPickedUp = true;
     }
 
     [ContextMenu(nameof(AddDebugItem))]
