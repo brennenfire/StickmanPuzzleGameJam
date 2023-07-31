@@ -17,7 +17,7 @@ public class BirdSpawn : MonoBehaviour
 
     IEnumerator WaitToSpawn()
     {
-        var wait = Random.Range(2, 10);
+        var wait = Random.Range(5, 15);
         float x = Random.Range(-2, 5);
         float y = Random.Range(-2, 5);
         var pos = new Vector3(x, y, 0);
