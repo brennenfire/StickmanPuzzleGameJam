@@ -8,11 +8,11 @@ public class Player : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] GameObject cameraFollowGO;
 
-    Animator animator;
+    public Animator animator;
     Rigidbody2D rb;
     CameraFollowObject cameraFollowObject;
 
-    float horizontalMovement;
+    public float horizontalMovement;
     public bool facingLeft = true;
 
     void Start()

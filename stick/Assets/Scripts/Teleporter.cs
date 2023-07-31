@@ -11,14 +11,32 @@ public class Teleporter : MonoBehaviour
     GameObject instantiatedObj;
     Player player;
 
+    bool stopPlayer;
+
+    private void Update()
+    {
+        if (stopPlayer == true)
+        {
+            player.animator.SetFloat("RunningSpeed", -1f);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         player = collision.GetComponent<Player>();
         if (player != null)
         {
+            stopPlayer = true;
             instantiatedObj = Instantiate(image, transform.position, transform.rotation);
             StartCoroutine(WaitForTp());
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        player = collision.GetComponent<Player>();
+        if (player != null)
+            stopPlayer = false;
     }
 
     IEnumerator WaitForTp()
