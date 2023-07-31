@@ -9,4 +9,9 @@ public class Options : MonoBehaviour
         Debug.Log("quit app");
         Application.Quit();
     }
+
+    public void ClearLines()
+    {
+        LineCreator.Instance.ClearLines();
+    }
 }

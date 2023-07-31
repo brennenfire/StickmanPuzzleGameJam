@@ -10,10 +10,13 @@ public class NextScene : MonoBehaviour
 
     void Update()
     {
-        changeTime -= Time.deltaTime;
-        if (changeTime <= 0)
+        if (changeTime != 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            changeTime -= Time.deltaTime;
+            if (changeTime <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
     }
 }
