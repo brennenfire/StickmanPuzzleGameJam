@@ -18,6 +18,7 @@ public class Teleporter : MonoBehaviour
         if (stopPlayer == true)
         {
             player.animator.SetFloat("RunningSpeed", -1f);
+            player.rb.velocity = new Vector2(player.rb.velocity.x, 0f);
         }
     }
 
@@ -41,8 +42,8 @@ public class Teleporter : MonoBehaviour
 
     IEnumerator WaitForTp()
     {
-        Destroy(instantiatedObj, 2f);
-        yield return new WaitForSeconds(1f);
+        Destroy(instantiatedObj, 1.4f);
+        yield return new WaitForSeconds(.6f);
         player.transform.position = exit.position;
     }
 }

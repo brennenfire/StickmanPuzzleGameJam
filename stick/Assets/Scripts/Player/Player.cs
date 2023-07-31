@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject cameraFollowGO;
 
     public Animator animator;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     CameraFollowObject cameraFollowObject;
 
     public float horizontalMovement;

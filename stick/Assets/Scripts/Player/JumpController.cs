@@ -30,7 +30,7 @@ public class JumpController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
             anim.SetTrigger("Jump");
-        
+
         ReadJumpInput();
         DoJump();
         StopJump();
