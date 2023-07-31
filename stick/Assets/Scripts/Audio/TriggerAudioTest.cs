@@ -6,7 +6,7 @@ using UnityEngine;
 public class TriggerAudioTest : MonoBehaviour
 {
     [SerializeField] public AudioObject[] clipsToPlay;
-    Collider2D collider;
+    new Collider2D collider;
 
     public static TriggerAudioTest Instance { get; private set; }    
 
