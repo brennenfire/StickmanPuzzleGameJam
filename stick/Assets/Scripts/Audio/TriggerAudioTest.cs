@@ -8,8 +8,11 @@ public class TriggerAudioTest : MonoBehaviour
     [SerializeField] public AudioObject[] clipsToPlay;
     Collider2D collider;
 
+    public static TriggerAudioTest Instance { get; private set; }    
+
     void Awake()
     {
+        Instance = this;
         collider = GetComponent<Collider2D>();    
     }
 
