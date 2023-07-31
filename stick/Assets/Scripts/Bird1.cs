@@ -1,17 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyTest : MonoBehaviour
+public class Bird1 : MonoBehaviour
 {
     [SerializeField] float birdSpeed;
+    Rigidbody2D rb;
 
-	Rigidbody2D rb;
-
-    private void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    void Update()
     {
         rb.velocity = new Vector2(birdSpeed, rb.velocity.y);
     }
