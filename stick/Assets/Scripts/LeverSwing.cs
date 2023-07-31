@@ -14,6 +14,7 @@ public class LeverSwing : MonoBehaviour
 
     void Start()
     {
+        onUp.Invoke();
         animator = GetComponent<Animator>();
     }
 
