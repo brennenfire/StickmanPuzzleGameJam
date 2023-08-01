@@ -10,21 +10,21 @@ public class LeverSwing : MonoBehaviour
 
     [SerializeField] UnityEvent onDown;
     [SerializeField] UnityEvent onUp;
-    [SerializeField] bool down = false;
+    [SerializeField] bool up = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        if (down == false)
+        if (up == false)
         {
             animator.SetTrigger("SwingDown");
-            down = !down;
+            up = !up;
             onDown.Invoke();
         }
         else
         {
             animator.SetTrigger("SwingUp");
-            down = !down;
+            up = !up;
             onUp.Invoke();
         }
     }
@@ -46,17 +46,17 @@ public class LeverSwing : MonoBehaviour
         if (playerInRange.Count > 0)
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if(down == false)
+                if(up == false)
                 {
                     animator.SetTrigger("SwingDown");
-                    down = !down;
+                    up = !up;
                     onDown.Invoke();
                     //StartCoroutine(WaitForLeverSwing());
                 }
                 else
                 {
                     animator.SetTrigger("SwingUp");
-                    down = !down;
+                    up = !up;
                     onUp.Invoke();
                     //StartCoroutine(WaitForLeverSwing());
                 }
@@ -68,7 +68,7 @@ public class LeverSwing : MonoBehaviour
     {
         yield return new WaitForSeconds(.3f);
 
-        if (down == false)
+        if (up == false)
         {
             onDown.Invoke();
         }
