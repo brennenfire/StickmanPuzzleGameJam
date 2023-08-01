@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -39,15 +40,25 @@ public class LeverSwing : MonoBehaviour
                 {
                     animator.SetTrigger("SwingDown");
                     down = !down;
-                    onDown.Invoke();
+                    StartCoroutine(WaitForLeverSwing());
                 }
                 else
                 {
                     animator.SetTrigger("SwingUp");
                     down = !down;
-                    onUp.Invoke();
+                    StartCoroutine(WaitForLeverSwing());
                 }
                 
             }
+    }
+
+    IEnumerator WaitForLeverSwing()
+    {
+        yield return new WaitForSeconds(.3f);
+
+        if (down == false)
+            onDown.Invoke();
+        else
+            onUp.Invoke();
     }
 }
