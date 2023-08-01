@@ -12,16 +12,18 @@ public class LeverSwing : MonoBehaviour
     [SerializeField] UnityEvent onUp;
     [SerializeField] bool down = false;
 
-    void Start()
+    void Awake()
     {
         animator = GetComponent<Animator>();
-        if (down == true)
+        if (down == false)
         {
             animator.SetTrigger("SwingDown");
+            down = !down;
         }
         else
         {
             animator.SetTrigger("SwingUp");
+            down = !down;
         }
     }
 
@@ -63,8 +65,12 @@ public class LeverSwing : MonoBehaviour
         yield return new WaitForSeconds(.3f);
 
         if (down == false)
+        {
             onDown.Invoke();
+        }
         else
+        {
             onUp.Invoke();
+        }
     }
 }
