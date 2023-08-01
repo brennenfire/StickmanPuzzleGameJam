@@ -10,13 +10,19 @@ public class LeverSwing : MonoBehaviour
 
     [SerializeField] UnityEvent onDown;
     [SerializeField] UnityEvent onUp;
-
-    bool down;
+    [SerializeField] bool down = false;
 
     void Start()
     {
-        onUp.Invoke();
         animator = GetComponent<Animator>();
+        if (down == true)
+        {
+            animator.SetTrigger("SwingDown");
+        }
+        else
+        {
+            animator.SetTrigger("SwingUp");
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
