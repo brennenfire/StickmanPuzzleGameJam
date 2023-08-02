@@ -14,13 +14,22 @@ public class Teleporter : MonoBehaviour
     HashSet<Player> playerInRange = new HashSet<Player>();
 
     bool stopPlayer;
+    [SerializeField] bool autoTP;
 
     void Update()
     {
         if (playerInRange.Count > 0)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && autoTP == false)
             {
+                player = FindObjectOfType<Player>();
+                stopPlayer = true;
+                instantiatedObj = Instantiate(image, transform.position, transform.rotation);
+                StartCoroutine(WaitForTp());
+            }
+            else if (autoTP == true)
+            {
+                playerInRange.Clear();
                 player = FindObjectOfType<Player>();
                 stopPlayer = true;
                 instantiatedObj = Instantiate(image, transform.position, transform.rotation);
@@ -28,6 +37,7 @@ public class Teleporter : MonoBehaviour
             }
         }
 
+        
         if (stopPlayer == true)
         {
             player.animator.SetFloat("RunningSpeed", -1f);
