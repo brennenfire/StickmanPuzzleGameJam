@@ -11,39 +11,51 @@ public class Teleporter : MonoBehaviour
     GameObject instantiatedObj;
     Player player;
 
+    HashSet<Player> playerInRange = new HashSet<Player>();
+
     bool stopPlayer;
 
-    private void Update()
+    void Update()
     {
+        if (playerInRange.Count > 0)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                player = FindObjectOfType<Player>();
+                stopPlayer = true;
+                instantiatedObj = Instantiate(image, transform.position, transform.rotation);
+                StartCoroutine(WaitForTp());
+            }
+        }
+
         if (stopPlayer == true)
         {
             player.animator.SetFloat("RunningSpeed", -1f);
-            player.rb.velocity = new Vector2(player.rb.velocity.x, 0f);
+            player.rb.velocity = new Vector2(0f, 0f);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        player = collision.GetComponent<Player>();
-        if (player != null)
+        if (collision.CompareTag("Player"))
         {
-            stopPlayer = true;
-            instantiatedObj = Instantiate(image, transform.position, transform.rotation);
-            StartCoroutine(WaitForTp());
+            playerInRange.Add(collision.GetComponent<Player>());
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
-        player = collision.GetComponent<Player>();
-        if (player != null)
-            stopPlayer = false;
+        if (collision.CompareTag("Player"))
+        {
+            playerInRange.Remove(collision.GetComponent<Player>());
+        }
     }
 
     IEnumerator WaitForTp()
     {
         Destroy(instantiatedObj, 1.4f);
         yield return new WaitForSeconds(.6f);
+        stopPlayer = false;
         player.transform.position = exit.position;
     }
 }
