@@ -16,6 +16,7 @@ public class Dialogue : MonoBehaviour
 
     void Start()
     {
+        gameObject.SetActive(false);
         Instance = this;
         textComponent.text = string.Empty;    
     }
@@ -38,6 +39,7 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue(DialogueObject dialogue)
     {
+        gameObject.SetActive(true);
         lines = dialogue.lines;
         index = 0;
         StartCoroutine(TypeLine());
@@ -62,6 +64,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            LineCreator.Instance.enabled = true;
             gameObject.SetActive(false);
         }
     }
