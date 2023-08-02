@@ -34,7 +34,6 @@ public class DialogueTrigger : MonoBehaviour
     [ContextMenu("test dialogue")]
     public void TriggerDialogue()
     {
-        LineCreator.Instance.enabled = false;
         Dialogue.Instance.StartDialogue(dialogue);
     }
     

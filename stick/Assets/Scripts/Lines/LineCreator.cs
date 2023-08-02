@@ -2,53 +2,56 @@ using UnityEngine;
 
 public class LineCreator : MonoBehaviour
 {
+    
+    public static LineCreator Instance { get; set; }
+
+    [SerializeField] float linePointsMinDistance;
     public GameObject linePrefab;
-    [SerializeField] float drawTimer = 3f;
-    float drawTimerLocal;
 
-    Line activeLine;
-    Line[] lines;
+    Line currentLine;
+    Camera cam;
 
-    public static LineCreator Instance { get; private set; }
-
-    void Awake()
+    private void Start()
     {
-        drawTimerLocal = drawTimer;
-        Instance = this;    
+        Instance = this;
+        cam = Camera.main;
     }
 
-    void Update()
+    private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            GameObject lineGO = Instantiate(linePrefab);
-            activeLine = lineGO.GetComponent<Line>();
-        }
+        if (Input.GetMouseButtonUp(0))
+            BeginDraw();
+
+        if (currentLine != null)
+            Draw();
 
         if (Input.GetMouseButtonUp(0))
-            activeLine = null;
-
-        if (activeLine != null)
-        {
-            drawTimer -= Time.deltaTime;
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            activeLine.DrawLine(mousePos);
-            if (drawTimer <= 0)
-            {
-                activeLine = null;
-                return;
-            }
-        }
+            EndDraw();
     }
 
-    [ContextMenu("clear lines")]
-    public void ClearLines()
+    void BeginDraw()
     {
-        drawTimer = drawTimerLocal;
-        lines = FindObjectsOfType<Line>();
-        foreach(var line in lines)
-        {
-            Destroy(line.gameObject);
-        }
+        currentLine = Instantiate(linePrefab, this.transform).GetComponent<Line>();
+
+        currentLine.UsePhysics(false);
+        currentLine.SetPointsMinDistance(linePointsMinDistance);
+    }
+
+    void Draw()
+    {
+        Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        currentLine.AddPoint(mousePos);
+    }
+
+    void EndDraw()
+    {
+        if (currentLine != null)
+            if (currentLine.pointsCount < 2)
+                Destroy(currentLine.gameObject);
+            else
+            {
+                currentLine.UsePhysics(true);
+                currentLine = null;
+            }
     }
 }

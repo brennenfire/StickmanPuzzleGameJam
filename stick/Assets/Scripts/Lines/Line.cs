@@ -5,33 +5,41 @@ using UnityEngine;
 public class Line : MonoBehaviour
 {
 	public LineRenderer lineRenderer;
-	public EdgeCollider2D edgeCol;
-	Rigidbody2D rb;
+	public EdgeCollider2D edgeCollider2D;
+	public Rigidbody2D rb;
 
-	List<Vector2> points;
+	List<Vector2> points = new List<Vector2>();
 
-    public void DrawLine(Vector2 mousePos)
+	[HideInInspector] public int pointsCount = 0;
+	float pointsMinDistance = .1f;
+
+	public void AddPoint(Vector2 newPoint)
 	{
-		if (points == null)
-		{
-			points = new List<Vector2>();
-			SetPoint(mousePos);
+		if (pointsCount >= 1 && Vector2.Distance(newPoint, GetLastPoint()) > pointsMinDistance)
 			return;
-		}
 
-		if(Vector2.Distance(points.Last(), mousePos) > .1f)
-			SetPoint(mousePos);
+		points.Add(newPoint);
+		pointsCount++;
 
+		lineRenderer.positionCount = pointsCount;
+		lineRenderer.SetPosition (pointsCount -1, newPoint);
+
+		if(pointsCount > 1)
+			edgeCollider2D.points = points.ToArray();
 	}
 
-	void SetPoint(Vector2 point)
+	Vector2 GetLastPoint()
 	{
-		points.Add(point);
+		return lineRenderer.GetPosition(pointsCount - 1);
+	}
 
-        lineRenderer.positionCount = points.Count;
-		lineRenderer.SetPosition(points.Count - 1, point);
+	public void UsePhysics(bool usePhysics)
+	{
+		rb.isKinematic = !usePhysics;
+	}
 
-		if (points.Count > 1)
-			edgeCol.points = points.ToArray();
+	public void SetPointsMinDistance (float distance)
+	{
+		pointsMinDistance = distance;
 	}
 }
