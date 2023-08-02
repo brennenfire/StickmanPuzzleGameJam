@@ -6,6 +6,7 @@ public class LineCreator : MonoBehaviour
 
     public GameObject linePrefab;
     public LayerMask cantDrawOverLayer;
+    public LayerMask cantDrawOverGroundLayer;
     Camera cam;
 
     public float linePointsMinDistance;
@@ -48,12 +49,19 @@ public class LineCreator : MonoBehaviour
     void Draw()
     {
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.CircleCast(mousePos, lineWidth / 3f, new Vector3(0f, 0f, 1), 1f, cantDrawOverLayer);
-
-        if (hit)
+        if (CheckCantDraw())
             EndDraw();
         else
             currentLine.AddPoint(mousePos);
+    }
+
+    bool CheckCantDraw()
+    {
+        Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        if (Physics2D.CircleCast(mousePos, lineWidth / 3f, new Vector3(0f, 0f, 1), 1f, cantDrawOverLayer) || Physics2D.CircleCast(mousePos, lineWidth / 3f, new Vector3(0f, 0f, 1), 1f, cantDrawOverGroundLayer))
+            return true;
+        else
+            return false;
     }
 
     void EndDraw()

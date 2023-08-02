@@ -24,7 +24,7 @@ public class Inspectable : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             Debug.Log("he here....");
             inspectablesInRange.Add(this);
@@ -34,9 +34,9 @@ public class Inspectable : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            if(inspectablesInRange.Remove(this))
+            if (inspectablesInRange.Remove(this))
             {
                 InspectablesInRangeChanged?.Invoke(inspectablesInRange.Any());
             }
@@ -57,7 +57,8 @@ public class Inspectable : MonoBehaviour
         OnInspectionCompleted?.Invoke();
         //AnyInspectionComplete?.Invoke(this, completedInspectionText);
         completedInspectionTextBox?.SetText(completedInspectionText);
-        completedInspectionTextBox.enabled = true;
+        if (completedInspectionTextBox != null)
+            completedInspectionTextBox.enabled = true;
         float messageTime = completedInspectionText.Length / 5;
         messageTime = Mathf.Clamp(messageTime, 3f, 15f);
         StartCoroutine(FadeCompletedText(messageTime));
@@ -66,7 +67,7 @@ public class Inspectable : MonoBehaviour
     IEnumerator FadeCompletedText(float messageTime)
     {
         completedInspectionTextBox.alpha = 1f;
-        while(completedInspectionTextBox.alpha > 0f)
+        while (completedInspectionTextBox.alpha > 0f)
         {
             yield return null;
             completedInspectionTextBox.alpha -= Time.deltaTime / messageTime;
