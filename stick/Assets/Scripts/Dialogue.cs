@@ -65,7 +65,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            LineCreator.Instance.enabled = true;
+          //  LineCreator.Instance.enabled = true;
             gameObject.SetActive(false);
         }
     }

@@ -2,30 +2,33 @@ using UnityEngine;
 
 public class LineCreator : MonoBehaviour
 {
-    
-    public static LineCreator Instance { get; set; }
-
-    [SerializeField] float linePointsMinDistance;
     public GameObject linePrefab;
+    public LayerMask cantDrawOverLayer;
+    Camera cam;
+
+    public float linePointsMinDistance;
+    public float lineWidth;
+    public Gradient lineColor;
 
     Line currentLine;
-    Camera cam;
+
+    int cantDrawIndex;
 
     private void Start()
     {
-        Instance = this;
+        cantDrawIndex = LayerMask.NameToLayer("CantDrawOver");
         cam = Camera.main;
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        if(Input.GetMouseButtonDown(0))
             BeginDraw();
 
         if (currentLine != null)
             Draw();
 
-        if (Input.GetMouseButtonUp(0))
+        if(Input.GetMouseButtonUp(0))
             EndDraw();
     }
 
@@ -33,23 +36,31 @@ public class LineCreator : MonoBehaviour
     {
         currentLine = Instantiate(linePrefab, this.transform).GetComponent<Line>();
 
+        currentLine.SetLineColor(lineColor);
+        currentLine.SetLineWidth(lineWidth);
+        currentLine.SetPointMinDistance(linePointsMinDistance);
         currentLine.UsePhysics(false);
-        currentLine.SetPointsMinDistance(linePointsMinDistance);
     }
 
     void Draw()
     {
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        currentLine.AddPoint(mousePos);
+        RaycastHit2D hit = Physics2D.CircleCast(mousePos, lineWidth / 3f, new Vector3(0f, 0f, 1), 1f, cantDrawOverLayer);
+
+        if (hit)
+            EndDraw();
+        else
+            currentLine.AddPoint(mousePos);
     }
 
     void EndDraw()
     {
-        if (currentLine != null)
-            if (currentLine.pointsCount < 2)
+        if(currentLine != null)
+            if(currentLine.pointsCount < 2)
                 Destroy(currentLine.gameObject);
             else
             {
+              //  currentLine.gameObject.layer = cantDrawIndex;
                 currentLine.UsePhysics(true);
                 currentLine = null;
             }
