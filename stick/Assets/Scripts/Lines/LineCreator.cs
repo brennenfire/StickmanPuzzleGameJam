@@ -3,6 +3,8 @@ using UnityEngine;
 public class LineCreator : MonoBehaviour
 {
     public GameObject linePrefab;
+    [SerializeField] float drawTimer = 3f;
+    float drawTimerLocal;
 
     Line activeLine;
     Line[] lines;
@@ -11,6 +13,7 @@ public class LineCreator : MonoBehaviour
 
     void Awake()
     {
+        drawTimerLocal = drawTimer;
         Instance = this;    
     }
 
@@ -27,14 +30,21 @@ public class LineCreator : MonoBehaviour
 
         if (activeLine != null)
         {
+            drawTimer -= Time.deltaTime;
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             activeLine.DrawLine(mousePos);
+            if (drawTimer <= 0)
+            {
+                activeLine = null;
+                return;
+            }
         }
     }
 
     [ContextMenu("clear lines")]
     public void ClearLines()
     {
+        drawTimer = drawTimerLocal;
         lines = FindObjectsOfType<Line>();
         foreach(var line in lines)
         {
