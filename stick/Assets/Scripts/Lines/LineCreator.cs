@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class LineCreator : MonoBehaviour
 {
+    public static LineCreator Instance { get; set; }
+
     public GameObject linePrefab;
     public LayerMask cantDrawOverLayer;
     Camera cam;
@@ -16,6 +18,7 @@ public class LineCreator : MonoBehaviour
 
     private void Start()
     {
+        Instance = this;
         cantDrawIndex = LayerMask.NameToLayer("CantDrawOver");
         cam = Camera.main;
     }
@@ -60,9 +63,16 @@ public class LineCreator : MonoBehaviour
                 Destroy(currentLine.gameObject);
             else
             {
-              //  currentLine.gameObject.layer = cantDrawIndex;
+                currentLine.gameObject.layer = cantDrawIndex;
                 currentLine.UsePhysics(true);
                 currentLine = null;
             }
+    }
+
+    public void ClearLines()
+    {
+        var lines = FindObjectsOfType<Line>();
+        foreach(var line in lines)
+            Destroy(line.gameObject);
     }
 }

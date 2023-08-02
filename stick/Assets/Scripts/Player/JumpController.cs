@@ -4,6 +4,7 @@ public class JumpController : MonoBehaviour
 {
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask lineLayer;
     [Header("Jumping Variables")]
     [SerializeField] float jumpPower;
     [SerializeField] float fallMultiplier;
@@ -91,7 +92,10 @@ public class JumpController : MonoBehaviour
 
     bool isGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.14f, groundLayer);
+        if (Physics2D.OverlapCircle(groundCheck.position, 0.14f, groundLayer) || Physics2D.OverlapCircle(groundCheck.position, 0.14f, lineLayer))
+            return true;
+        else
+            return false;
     }
 
     void ReadJumpInput()

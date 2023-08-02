@@ -39,6 +39,7 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue(DialogueObject dialogue)
     {
+        LineCreator.Instance.enabled = false;
         gameObject.SetActive(true);
         textComponent.text = string.Empty;
         lines = dialogue.lines;
@@ -65,7 +66,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-          //  LineCreator.Instance.enabled = true;
+            LineCreator.Instance.enabled = true;
             gameObject.SetActive(false);
         }
     }
