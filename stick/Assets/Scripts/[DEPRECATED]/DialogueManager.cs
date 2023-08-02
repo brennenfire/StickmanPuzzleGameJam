@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
+    /*
     Queue<string> sentences;
 
     public TMP_Text dialogueText;
@@ -33,7 +35,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         DisplayNextSentence();
-
     }
 
     public void DisplayNextSentence()
@@ -54,7 +55,7 @@ public class DialogueManager : MonoBehaviour
         foreach(char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 
@@ -63,4 +64,5 @@ public class DialogueManager : MonoBehaviour
         canvas.enabled = false;
         LineCreator.Instance.enabled = true;
     }
+    */
 }

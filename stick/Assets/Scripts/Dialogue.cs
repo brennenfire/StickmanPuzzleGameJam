@@ -1,13 +1,68 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-[Serializable]
-public class Dialogue
+public class Dialogue : MonoBehaviour
 {
-    public string name;
+    public TMP_Text textComponent;
+    public float textSpeed;
+    string[] lines;
 
-    [TextArea]
-    public string[] sentences;
+    public static Dialogue Instance { get; private set; }
+
+    int index;
+
+    void Start()
+    {
+        Instance = this;
+        textComponent.text = string.Empty;    
+    }
+
+    void Update()
+    {
+        if(Input.GetMouseButtonDown(0)) 
+        {
+            if(textComponent.text == lines[index])
+            {
+                NextLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index];
+            }
+        }    
+    }
+
+    public void StartDialogue(DialogueObject dialogue)
+    {
+        lines = dialogue.lines;
+        index = 0;
+        StartCoroutine(TypeLine());
+    }
+
+    IEnumerator TypeLine()
+    {
+        foreach(char c in lines[index].ToCharArray())
+        {
+            textComponent.text += c;
+            yield return new WaitForSeconds(textSpeed);
+        }
+    }
+
+    void NextLine()
+    {
+        if(index < lines.Length - 1) 
+        {
+            index++;
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    
     HashSet<Player> playerInRange = new HashSet<Player>();
-    public Dialogue dialogue;
+    public DialogueObject dialogue;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,6 +35,7 @@ public class DialogueTrigger : MonoBehaviour
     public void TriggerDialogue()
     {
         LineCreator.Instance.enabled = false;
-        DialogueManager.Instance.StartDialogue(dialogue);
+        Dialogue.Instance.StartDialogue(dialogue);
     }
+    
 }
