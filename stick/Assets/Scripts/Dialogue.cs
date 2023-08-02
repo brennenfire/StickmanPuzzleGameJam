@@ -40,6 +40,7 @@ public class Dialogue : MonoBehaviour
     public void StartDialogue(DialogueObject dialogue)
     {
         gameObject.SetActive(true);
+        textComponent.text = string.Empty;
         lines = dialogue.lines;
         index = 0;
         StartCoroutine(TypeLine());
