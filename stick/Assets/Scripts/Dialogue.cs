@@ -3,9 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
+    [SerializeField] Canvas corners;
+
+    Canvas canvas;
     public TMP_Text textComponent;
     public float textSpeed;
     string[] lines;
@@ -16,7 +20,9 @@ public class Dialogue : MonoBehaviour
 
     void Start()
     {
-        gameObject.SetActive(false);
+        corners.enabled = false;
+        canvas = GetComponent<Canvas>();
+        canvas.enabled = false;
         Instance = this;
         textComponent.text = string.Empty;    
     }
@@ -39,12 +45,25 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue(DialogueObject dialogue)
     {
+        StartCoroutine(AppearCorners());
         LineCreator.Instance.enabled = false;
-        gameObject.SetActive(true);
+        canvas.enabled = true;
         textComponent.text = string.Empty;
         lines = dialogue.lines;
         index = 0;
         StartCoroutine(TypeLine());
+        
+    }
+
+    IEnumerator AppearCorners()
+    {
+        corners.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+    }
+    IEnumerator DissappearCorners()
+    {
+        yield return new WaitForSeconds(0.1f);
+        corners.enabled = false;
     }
 
     IEnumerator TypeLine()
@@ -66,8 +85,9 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            StartCoroutine(DissappearCorners());
             LineCreator.Instance.enabled = true;
-            gameObject.SetActive(false);
+            canvas.enabled = false;
         }
     }
 }
