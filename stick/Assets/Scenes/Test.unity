@@ -21386,10 +21386,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 636730851813763843, guid: 201d0aa17f1775f4389a3d465d7b98f8, type: 3}
-      propertyPath: lineCounter
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1718977073231344165, guid: 201d0aa17f1775f4389a3d465d7b98f8, type: 3}
       propertyPath: m_Name
       value: LineCreator
