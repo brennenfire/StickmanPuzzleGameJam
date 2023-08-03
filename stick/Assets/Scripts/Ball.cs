@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] float pushVelocity;
+    [SerializeField] float pushVelocityX;
+    [SerializeField] float pushVelocityY;
 
     Rigidbody2D rigidBody;
     Vector3 startingPosition;
@@ -17,7 +18,7 @@ public class Ball : MonoBehaviour
 
     public void PushBall()
     {
-        rigidBody.velocity += new Vector2(pushVelocity, 0);
+        rigidBody.velocity += new Vector2(pushVelocityX, pushVelocityY);
     }
     
     public void ResetBall()
