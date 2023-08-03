@@ -33,7 +33,11 @@ public class LineCreator : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            BeginDraw();
+            if (lineCounter > 0)
+            {
+                BeginDraw();
+                lineCounter--;
+            }
         }
 
         if (currentLine != null)
@@ -41,7 +45,7 @@ public class LineCreator : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-                EndDraw();
+            EndDraw();
         }
     }
 
