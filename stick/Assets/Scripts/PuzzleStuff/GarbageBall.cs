@@ -9,6 +9,7 @@ public class GarbageBall : MonoBehaviour
         if(collision.collider.GetComponent<Player>() != null)
         {
             Player.Instance.Reset();
+            LineCreator.Instance.ClearLines();
         }
         else if(collision.collider.GetComponent<GarbageBall>() != null)
         {
