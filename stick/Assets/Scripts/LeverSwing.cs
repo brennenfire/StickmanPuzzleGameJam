@@ -8,13 +8,19 @@ public class LeverSwing : MonoBehaviour
     HashSet<Player> playerInRange = new HashSet<Player>();
     Animator animator;
 
-    [SerializeField] UnityEvent onDown;
     [SerializeField] UnityEvent onUp;
+    [SerializeField] UnityEvent onDown;
+    [SerializeField] bool timedLever;
+    [SerializeField] float timer;
 
     bool up;
-
+    
     void Start()
     {
+        //if(!up)
+        //{
+            //onUp?.Invoke();
+        //}
         animator = GetComponent<Animator>();
     }
 
@@ -33,24 +39,32 @@ public class LeverSwing : MonoBehaviour
     void Update()
     {
         if (playerInRange.Count > 0)
+            
+        {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if(up == false)
+                if (timedLever == false)
                 {
-                    animator.SetTrigger("SwingDown");
-                    up = !up;
-                    onUp.Invoke();
-                    StartCoroutine(WaitForLeverSwing());
+                    if (up == false)
+                    {
+                        animator.SetTrigger("SwingDown");
+                        up = !up;
+                        StartCoroutine(WaitForLeverSwing());
+                    }
+                    else
+                    {
+                        animator.SetTrigger("SwingUp");
+                        up = !up;
+                        StartCoroutine(WaitForLeverSwing());
+                    }
                 }
                 else
                 {
-                    animator.SetTrigger("SwingUp");
-                    up = !up;
-                    onUp.Invoke();
-                    StartCoroutine(WaitForLeverSwing());
+                    animator.SetTrigger("SwingDown");
+                    StartCoroutine(TimedLever());
                 }
-                
             }
+        }
     }
 
     IEnumerator WaitForLeverSwing()
@@ -65,5 +79,15 @@ public class LeverSwing : MonoBehaviour
         {
             onDown.Invoke();
         }
+    }
+
+    IEnumerator TimedLever()
+    {
+        yield return new WaitForSeconds(.3f);
+        onDown.Invoke();
+        yield return new WaitForSeconds(timer);
+        animator.SetTrigger("SwingUp");
+        onUp.Invoke();
+
     }
 }
