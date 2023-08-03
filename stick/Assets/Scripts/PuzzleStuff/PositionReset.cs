@@ -13,6 +13,7 @@ public class PositionReset : MonoBehaviour
         {
             LineCreator.Instance.lineCounter = counter;
             LineCreator.Instance.usePhysics = physics;
+            LineCreator.Instance.initialLineCounter = counter;
         }
     }
 }

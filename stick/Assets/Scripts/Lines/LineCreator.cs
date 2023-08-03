@@ -17,7 +17,7 @@ public class LineCreator : MonoBehaviour
 
     int cantDrawIndex;
     public int lineCounter = 3;
-    int initialLineCounter;
+    public int initialLineCounter = 0;
 
     public bool usePhysics = false;
     
