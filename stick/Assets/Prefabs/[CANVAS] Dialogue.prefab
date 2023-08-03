@@ -39,7 +39,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 790.3745, y: 382}
+  m_SizeDelta: {x: 998.9408, y: 363.6462}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1680576952269117377
 CanvasRenderer:
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 45.380737, y: 0, z: 67.338745, w: 7.319412}
+  m_margin: {x: 45.380737, y: 0, z: 15.61438, w: 25.673264}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -472,5 +472,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b5e5f57e250ed34183731b7551c7ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corners: {fileID: 0}
   textComponent: {fileID: 4909652899248639021}
   textSpeed: 0.05
