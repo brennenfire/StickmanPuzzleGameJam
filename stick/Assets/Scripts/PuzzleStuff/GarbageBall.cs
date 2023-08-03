@@ -8,7 +8,15 @@ public class GarbageBall : MonoBehaviour
     {
         if(collision.collider.GetComponent<Player>() != null)
         {
-
+            Player.Instance.Reset();
+        }
+        else if(collision.collider.GetComponent<GarbageBall>() != null)
+        {
+            return;
+        }
+        else if(collision.collider.GetComponent<IgnoreObject>() != null)
+        {
+            return;
         }
         else
         {

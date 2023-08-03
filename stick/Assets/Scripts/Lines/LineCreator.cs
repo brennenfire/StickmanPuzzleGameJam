@@ -16,24 +16,33 @@ public class LineCreator : MonoBehaviour
     Line currentLine;
 
     int cantDrawIndex;
+    public int lineCounter = 3;
+    int initialLineCounter;
 
+    public bool usePhysics = false;
+    
     private void Start()
     {
+        initialLineCounter = lineCounter;
         Instance = this;
         cantDrawIndex = LayerMask.NameToLayer("CantDrawOver");
         cam = Camera.main;
     }
 
-    private void Update()
+    void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
+        {
             BeginDraw();
+        }
 
         if (currentLine != null)
             Draw();
 
-        if(Input.GetMouseButtonUp(0))
-            EndDraw();
+        if (Input.GetMouseButtonUp(0))
+        {
+                EndDraw();
+        }
     }
 
     void BeginDraw()
@@ -66,19 +75,25 @@ public class LineCreator : MonoBehaviour
 
     void EndDraw()
     {
-        if(currentLine != null)
-            if(currentLine.pointsCount < 2)
+        if (currentLine != null)
+            if (currentLine.pointsCount < 2)
                 Destroy(currentLine.gameObject);
-            else
+            else if (usePhysics == true)
             {
                 currentLine.gameObject.layer = cantDrawIndex;
                 currentLine.UsePhysics(true);
+                currentLine = null;
+            }
+            else if (usePhysics == false)
+            {
+                currentLine.gameObject.layer = cantDrawIndex;
                 currentLine = null;
             }
     }
 
     public void ClearLines()
     {
+        lineCounter = initialLineCounter;
         var lines = FindObjectsOfType<Line>();
         foreach(var line in lines)
             Destroy(line.gameObject);
