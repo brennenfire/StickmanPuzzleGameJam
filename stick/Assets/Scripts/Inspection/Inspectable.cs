@@ -59,7 +59,7 @@ public class Inspectable : MonoBehaviour
         completedInspectionTextBox?.SetText(completedInspectionText);
         if (completedInspectionTextBox != null)
             completedInspectionTextBox.enabled = true;
-        float messageTime = completedInspectionText.Length / 5;
+        float messageTime = completedInspectionText.Length / 10;
         messageTime = Mathf.Clamp(messageTime, 3f, 15f);
         StartCoroutine(FadeCompletedText(messageTime));
     }
