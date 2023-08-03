@@ -1352,6 +1352,7 @@ MonoBehaviour:
   garbageBall: {fileID: 3705174238603327031, guid: 64e8909b932821c4db19b66feec63aec, type: 3}
   middleToLeft: -7
   middleToRight: 7
+  respawnTimer: 0.2
 --- !u!1001 &546521531
 PrefabInstance:
   m_ObjectHideFlags: 0

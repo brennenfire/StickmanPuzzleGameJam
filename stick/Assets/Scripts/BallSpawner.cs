@@ -8,6 +8,7 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] GameObject garbageBall;
     [SerializeField] float middleToLeft;
     [SerializeField] float middleToRight;
+    [SerializeField] float respawnTimer;
     Vector3 spawnPosition;
 
     void Start()
@@ -25,7 +26,7 @@ public class BallSpawner : MonoBehaviour
     {
         var sizeRandom = UnityEngine.Random.Range(1f, 2f);
         spawnPosition.x = UnityEngine.Random.Range(middleToRight, middleToLeft);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(respawnTimer);
         GameObject newObject = Instantiate(garbageBall, transform.position + spawnPosition, Quaternion.identity);
         newObject.transform.localScale = new Vector3(sizeRandom, sizeRandom, 1f);
         SpawnBall();
