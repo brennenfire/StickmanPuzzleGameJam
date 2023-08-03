@@ -11,9 +11,14 @@ public class Player : MonoBehaviour
 
     public float horizontalMovement;
     public bool facingLeft = true;
+    Vector3 startingPosition;
+
+    public static Player Instance { get; private set; } 
 
     void Start()
     {
+        Instance = this;
+        startingPosition = transform.position;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
@@ -78,5 +83,10 @@ public class Player : MonoBehaviour
 
             cameraFollowObject.CallTurn();
         }
+    }
+
+    public void Reset()
+    {
+            
     }
 }

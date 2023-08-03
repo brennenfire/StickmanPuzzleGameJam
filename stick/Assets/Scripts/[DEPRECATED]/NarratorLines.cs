@@ -10,7 +10,7 @@ public class NarratorLines : MonoBehaviour
     int index = 0;
 
     Narrator narrator;
-    Collider2D collider;
+    new Collider2D collider;
     
     void Start()
     {

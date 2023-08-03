@@ -16,6 +16,11 @@ public class Teleporter : MonoBehaviour
     bool stopPlayer;
     [SerializeField] bool autoTP;
 
+    void Start()
+    {
+        player = FindObjectOfType<Player>();    
+    }
+
     void Update()
     {
         if (playerInRange.Count > 0)

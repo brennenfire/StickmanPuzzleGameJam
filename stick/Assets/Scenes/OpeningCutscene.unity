@@ -266,6 +266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 3
+  autoChange: 1
+  sceneName: Test
 --- !u!1 &1308371911
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,8 +501,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: you new to world whaaaaat?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 77e7b6bae392aac4ca12fea9a99f1d4b, type: 2}
-  m_sharedMaterial: {fileID: 4585381503725135197, guid: 77e7b6bae392aac4ca12fea9a99f1d4b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

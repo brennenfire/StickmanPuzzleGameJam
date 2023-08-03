@@ -49,7 +49,7 @@ public class LineCreator : MonoBehaviour
     void Draw()
     {
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        if (CheckCantDraw())
+        if (!CheckCantDraw())
             EndDraw();
         else
             currentLine.AddPoint(mousePos);
