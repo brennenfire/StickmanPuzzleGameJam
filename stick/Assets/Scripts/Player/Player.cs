@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public float horizontalMovement;
     public bool facingLeft = true;
     Vector3 startingPosition;
+    float fallSpeedYDampingChangeThreshold;
 
     public static Player Instance { get; private set; } 
 
@@ -23,10 +24,19 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         cameraFollowObject = cameraFollowGO.GetComponent<CameraFollowObject>();
+        fallSpeedYDampingChangeThreshold = CameraManager.Instance.fallSpeedYDampingChangeThreshold;
     }
 
     void Update()
     {
+        if (rb.velocity.y < fallSpeedYDampingChangeThreshold && !CameraManager.Instance.IsLerpingYDamping && !CameraManager.Instance.LerpedFromPlayerFalling)
+            CameraManager.Instance.LerpYdamping(true);
+        if(rb.velocity.y >= 0f && !CameraManager.Instance.IsLerpingYDamping && !CameraManager.Instance.LerpedFromPlayerFalling)
+        {
+            CameraManager.Instance.LerpedFromPlayerFalling = false;
+            CameraManager.Instance.LerpYdamping(false);
+        }
+
         ReadHorizontalInput();
     }
 
@@ -39,6 +49,8 @@ public class Player : MonoBehaviour
 
     void Movement()
     {
+
+
         if (horizontalMovement != 0)
         {
             animator.SetFloat("RunningSpeed", 1f);
