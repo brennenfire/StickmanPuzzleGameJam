@@ -85,8 +85,17 @@ public class Player : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.GetComponent<PositionReset>() != null)
+        {
+            startingPosition = collision.GetComponent<PositionReset>().transform.position;
+        }
+    }
+
+    [ContextMenu("try reset pos")]
     public void Reset()
     {
-            
+        transform.position = startingPosition; 
     }
 }
