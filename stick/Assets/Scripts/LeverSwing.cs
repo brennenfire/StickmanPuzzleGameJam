@@ -10,23 +10,12 @@ public class LeverSwing : MonoBehaviour
 
     [SerializeField] UnityEvent onDown;
     [SerializeField] UnityEvent onUp;
-    [SerializeField] bool up = false;
+
+    bool up;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        if (up == false)
-        {
-            animator.SetTrigger("SwingDown");
-            up = !up;
-            onDown.Invoke();
-        }
-        else
-        {
-            animator.SetTrigger("SwingUp");
-            up = !up;
-            onUp.Invoke();
-        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -50,15 +39,15 @@ public class LeverSwing : MonoBehaviour
                 {
                     animator.SetTrigger("SwingDown");
                     up = !up;
-                    onDown.Invoke();
-                    //StartCoroutine(WaitForLeverSwing());
+                    onUp.Invoke();
+                    StartCoroutine(WaitForLeverSwing());
                 }
                 else
                 {
                     animator.SetTrigger("SwingUp");
                     up = !up;
                     onUp.Invoke();
-                    //StartCoroutine(WaitForLeverSwing());
+                    StartCoroutine(WaitForLeverSwing());
                 }
                 
             }
@@ -70,11 +59,11 @@ public class LeverSwing : MonoBehaviour
 
         if (up == false)
         {
-            onDown.Invoke();
+            onUp.Invoke();
         }
         else
         {
-            onUp.Invoke();
+            onDown.Invoke();
         }
     }
 }
