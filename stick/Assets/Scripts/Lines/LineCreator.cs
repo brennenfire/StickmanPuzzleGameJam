@@ -33,23 +33,20 @@ public class LineCreator : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (lineCounter > 0 && lineCounter != -1)
+            if(lineCounter == 0)
             {
-                BeginDraw();
-                lineCounter--;
+                return;
             }
-            else if(lineCounter <= -1)
-            {
-                BeginDraw();
-            }
+            BeginDraw();
         }
 
         if (currentLine != null)
+        {
             Draw();
+        }
 
         if (Input.GetMouseButtonUp(0))
         {
-            lineCounter--;
             EndDraw();
         }
     }
@@ -92,11 +89,13 @@ public class LineCreator : MonoBehaviour
                 currentLine.gameObject.layer = cantDrawIndex;
                 currentLine.UsePhysics(true);
                 currentLine = null;
+                lineCounter--;
             }
             else if (usePhysics == false)
             {
                 currentLine.gameObject.layer = cantDrawIndex;
                 currentLine = null;
+                lineCounter--;
             }
     }
 
