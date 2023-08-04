@@ -14,13 +14,15 @@ public class LeverSwing : MonoBehaviour
     [SerializeField] float timer;
 
     bool up;
-    
+    bool canSwing;
+
     void Start()
     {
         //if(!up)
         //{
-            //onUp?.Invoke();
+        //onUp?.Invoke();
         //}
+        canSwing = true;
         animator = GetComponent<Animator>();
     }
 
@@ -58,8 +60,9 @@ public class LeverSwing : MonoBehaviour
                         StartCoroutine(WaitForLeverSwing());
                     }
                 }
-                else
+                else if(timedLever != false && canSwing == true)
                 {
+                    canSwing = false;
                     animator.SetTrigger("SwingDown");
                     StartCoroutine(TimedLever());
                 }
@@ -86,6 +89,7 @@ public class LeverSwing : MonoBehaviour
         yield return new WaitForSeconds(.3f);
         onDown.Invoke();
         yield return new WaitForSeconds(timer);
+        canSwing = true;
         animator.SetTrigger("SwingUp");
         onUp.Invoke();
 

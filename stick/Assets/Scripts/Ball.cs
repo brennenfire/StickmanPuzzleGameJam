@@ -26,4 +26,12 @@ public class Ball : MonoBehaviour
         transform.position = startingPosition;
         rigidBody.velocity = Vector3.zero;
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.CompareTag("Ground"))
+        {
+            ResetBall();
+        }
+    }
 }

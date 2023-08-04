@@ -312,4 +312,5 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  up: 0
+  timedLever: 1
+  timer: 2
