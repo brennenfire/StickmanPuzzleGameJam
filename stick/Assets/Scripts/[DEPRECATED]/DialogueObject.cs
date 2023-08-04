@@ -1,7 +1,8 @@
 ﻿using System;
+using UnityEngine;
 
 [Serializable]
 public class DialogueObject
 {
-    public string[] lines;
+    [TextArea] public string[] lines;
 }

@@ -9,11 +9,11 @@ public class InspectionManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E)) 
+        if(Input.GetKeyDown(KeyCode.F)) 
         {
             currentInspectable = Inspectable.InspectablesInRange.FirstOrDefault();
         }
-        if(Input.GetKeyDown(KeyCode.E) && currentInspectable != null) 
+        if(Input.GetKeyDown(KeyCode.F) && currentInspectable != null) 
         {
             Debug.Log("inspected!");
             currentInspectable.CompleteInspection();
