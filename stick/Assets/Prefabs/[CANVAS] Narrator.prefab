@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2314431758930757300}
   - component: {fileID: 8879893396021459027}
   - component: {fileID: 7980642289066944174}
-  - component: {fileID: 5205760942601881616}
+  - component: {fileID: 8155995221245528466}
   m_Layer: 5
   m_Name: '[CANVAS] Narrator'
   m_TagString: Untagged
@@ -35,7 +35,7 @@ RectTransform:
   - {fileID: 662963777613504227}
   - {fileID: 777520299979305153}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5205760942601881616
+--- !u!114 &8155995221245528466
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,11 +114,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4389012104060966035}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ee852d895d780e4880ebf660f7f3ec7, type: 3}
+  m_Script: {fileID: 11500000, guid: a7e5ae865926cbd49bf6045bf04a6cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  subtitleText: {fileID: 5083163920983483040}
-  canvas: {fileID: 2314431758930757300}
+  NarratorCanvas: {fileID: 2314431758930757300}
+  narratorText: {fileID: 5083163920983483040}
 --- !u!1 &4400180369555615824
 GameObject:
   m_ObjectHideFlags: 0

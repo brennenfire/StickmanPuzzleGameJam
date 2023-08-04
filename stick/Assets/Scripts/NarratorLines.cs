@@ -39,7 +39,7 @@ public class NarratorLines : MonoBehaviour
         if (index < lines.Length - 1)
         {
             index++;
-            narrator.SetText(lines[index]);
+            //narrator.SetText(lines[index]);
             TestDialogue();
         }
         else
