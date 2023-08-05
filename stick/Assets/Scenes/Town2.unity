@@ -446,6 +446,119 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7715507292178064031, guid: 868dd128f709bcf4fac974946c6a4e44, type: 3}
   m_PrefabInstance: {fileID: 2053053124}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &97419623
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522187413969545451, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8074269684328267497, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_Name
+      value: '[CANVAS] Intro'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793732315151394977, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793732315151394977, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793732315151394977, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
 --- !u!1 &120306844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,6 +2533,76 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &614844234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3578518014871609170, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+  m_PrefabInstance: {fileID: 2089705633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &614844235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614844234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
+  OnInspectionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  completedInspectionText: Not quite as charming anymore.
+  completedInspectionTextBox: {fileID: 405739074}
+  item: {fileID: 0}
+  isPickup: 0
+--- !u!61 &614844236
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614844234}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.7375, y: 3.2}
+    newSize: {x: 12.38, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.7375, y: 3.2}
+  m_EdgeRadius: 0
 --- !u!1 &621251158
 GameObject:
   m_ObjectHideFlags: 0
@@ -8473,7 +8656,8 @@ PrefabInstance:
       value: Player Room
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7373004208953472370, guid: bb14f774e8b4c394785ceec6f393971b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb14f774e8b4c394785ceec6f393971b, type: 3}
@@ -8801,6 +8985,94 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1702961792 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1965026902474422431, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+  m_PrefabInstance: {fileID: 2089705633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1702961793
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702961792}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -1.0055557}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.3375, y: 1.69375}
+    newSize: {x: 3.74, y: 2.71}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.3375, y: 3.7048614}
+  m_EdgeRadius: 0
+--- !u!114 &1702961794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702961792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
+  OnInspectionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  completedInspectionText: He's always bored, but I don't think I've ever seen him
+    sad.
+  completedInspectionTextBox: {fileID: 405739074}
+  item: {fileID: 0}
+  isPickup: 0
+--- !u!114 &1702961795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702961792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ab9d44a0efd994994be2893b3983bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    lines:
+    - Hey...
+    - Mind if we just...don't talk?
+    - I'm not feeling up to snuff today.
 --- !u!4 &1774701003 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2048592499416053187, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
@@ -10057,8 +10329,175 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3578518014871609170, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 614844236}
+    - targetCorrespondingSourceObject: {fileID: 3578518014871609170, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 614844235}
+    - targetCorrespondingSourceObject: {fileID: 1965026902474422431, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1702961793}
+    - targetCorrespondingSourceObject: {fileID: 1965026902474422431, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1702961794}
+    - targetCorrespondingSourceObject: {fileID: 1965026902474422431, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1702961795}
+    - targetCorrespondingSourceObject: {fileID: 8125885700399259901, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2089705635}
+    - targetCorrespondingSourceObject: {fileID: 8125885700399259901, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2089705636}
+    - targetCorrespondingSourceObject: {fileID: 2099527085638492654, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2089705638}
+    - targetCorrespondingSourceObject: {fileID: 2099527085638492654, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2089705639}
   m_SourcePrefab: {fileID: 100100000, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+--- !u!1 &2089705634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8125885700399259901, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+  m_PrefabInstance: {fileID: 2089705633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &2089705635
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089705634}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.010952592}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.74375, y: 1.45625}
+    newSize: {x: 9.19, y: 2.33}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.74375, y: 6.67124}
+  m_EdgeRadius: 0
+--- !u!114 &2089705636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089705634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
+  OnInspectionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  completedInspectionText: That helmet almost brightens my day...almost.
+  completedInspectionTextBox: {fileID: 405739074}
+  item: {fileID: 0}
+  isPickup: 0
+--- !u!1 &2089705637 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2099527085638492654, guid: 7fa6ad5487bf433409028d6d110bbe4b, type: 3}
+  m_PrefabInstance: {fileID: 2089705633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &2089705638
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089705637}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.29531407}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.74375, y: 1.54375}
+    newSize: {x: 9.19, y: 2.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.74375, y: 6.349048}
+  m_EdgeRadius: 0
+--- !u!114 &2089705639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089705637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
+  OnInspectionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  completedInspectionText: They are both empty now.
+  completedInspectionTextBox: {fileID: 405739074}
+  item: {fileID: 0}
+  isPickup: 0
 --- !u!1 &2101581391
 GameObject:
   m_ObjectHideFlags: 0
