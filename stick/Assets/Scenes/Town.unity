@@ -12211,6 +12211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[CANVAS] Options Menu'
       objectReference: {fileID: 0}
+    - target: {fileID: 9055522365364046132, guid: 596eac4f9df22b943973ad2a597e29e0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -432
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4433271905523092901, guid: 596eac4f9df22b943973ad2a597e29e0, type: 3}
