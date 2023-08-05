@@ -463,7 +463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31474742}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -58.84, y: -85.56, z: 0}
+  m_LocalPosition: {x: -64.50129, y: -85.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1639,7 +1639,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 274799968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -73.001465, y: -84.81, z: 0}
+  m_LocalPosition: {x: -42.50085, y: -2.5000496, z: 0}
   m_LocalScale: {x: 2.75, y: 5.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1785,7 +1785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291189993}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -63.33, y: -86.8, z: 0}
+  m_LocalPosition: {x: -73.001465, y: -85.71304, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2554,6 +2554,77 @@ Transform:
   m_Father: {fileID: 1101338369}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &470236681 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6683761636336418868, guid: 3999956f16e64bc4bacbbd5335833ca2, type: 3}
+  m_PrefabInstance: {fileID: 1071657559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &470236684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470236681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
+  OnInspectionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  completedInspectionText: My bed. It's comfy and it's even got a nice flower beside
+    it. Too bad it's fake.
+  completedInspectionTextBox: {fileID: 405739074}
+  item: {fileID: 0}
+  isPickup: 0
+--- !u!61 &470236685
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470236681}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.1538463, y: 6.423077}
+    newSize: {x: 6.1538463, y: 6.423077}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.1538463, y: 6.423077}
+  m_EdgeRadius: 0
 --- !u!1 &477649950 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8653719598885068355, guid: 3999956f16e64bc4bacbbd5335833ca2, type: 3}
@@ -4600,7 +4671,11 @@ MonoBehaviour:
   - It's time for an adventure!
   - I'm sure you are excited but first I need to ask you something.
   - Where's your table?
-  - Where's your table?
+  - You silly man.
+  - Atleast you can always draw another.
+  - Just use your special toothbrush to draw.
+  - After you are done with that inspect the room and make sure everything else is
+    in it's rightful place.
 --- !u!1001 &758314409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5494,6 +5569,7 @@ GameObject:
   - component: {fileID: 807527841}
   - component: {fileID: 807527840}
   - component: {fileID: 807527842}
+  - component: {fileID: 807527843}
   m_Layer: 0
   m_Name: PlayerHouse
   m_TagString: Untagged
@@ -5588,6 +5664,51 @@ MonoBehaviour:
   completedInspectionTextBox: {fileID: 405739074}
   item: {fileID: 0}
   isPickup: 0
+--- !u!61 &807527843
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807527839}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -3.645832, y: -0.28994393}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 15.75, y: 8.3}
+    newSize: {x: 15.75, y: 8.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.0918045, y: 7.7201114}
+  m_EdgeRadius: 0
 --- !u!1 &813910725
 GameObject:
   m_ObjectHideFlags: 0
@@ -6570,6 +6691,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 3999956f16e64bc4bacbbd5335833ca2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 477649957}
+    - targetCorrespondingSourceObject: {fileID: -6683761636336418868, guid: 3999956f16e64bc4bacbbd5335833ca2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 470236685}
+    - targetCorrespondingSourceObject: {fileID: -6683761636336418868, guid: 3999956f16e64bc4bacbbd5335833ca2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 470236684}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 3999956f16e64bc4bacbbd5335833ca2, type: 3}
 --- !u!1 &1076450591
 GameObject:
@@ -8357,7 +8484,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389034875}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -66.9376, y: -87.3, z: 0}
+  m_LocalPosition: {x: -76.8457, y: -87.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8401,7 +8528,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 13.38, y: 0.38}
-    newSize: {x: 45.085014, y: 0.38}
+    newSize: {x: 25.268688, y: 0.38}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -8668,7 +8795,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 45.085014, y: 0.38}
+  m_Size: {x: 25.268688, y: 0.38}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -10924,6 +11051,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1899303723}
   - component: {fileID: 1899303724}
+  - component: {fileID: 1899303726}
+  - component: {fileID: 1899303725}
   m_Layer: 0
   m_Name: Chair
   m_TagString: Untagged
@@ -10998,6 +11127,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1899303725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899303722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
+  OnInspectionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  completedInspectionText: Dude, it's just a chair.
+  completedInspectionTextBox: {fileID: 405739074}
+  item: {fileID: 0}
+  isPickup: 0
+--- !u!61 &1899303726
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899303722}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0230769, y: 2.1923077}
+    newSize: {x: 1.0230769, y: 2.1923077}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0230769, y: 2.1923077}
+  m_EdgeRadius: 0
 --- !u!1 &1935779884
 GameObject:
   m_ObjectHideFlags: 0
