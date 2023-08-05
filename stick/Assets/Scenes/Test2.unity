@@ -21384,7 +21384,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 636730851813763843, guid: 201d0aa17f1775f4389a3d465d7b98f8, type: 3}
       propertyPath: ink
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 636730851813763843, guid: 201d0aa17f1775f4389a3d465d7b98f8, type: 3}
       propertyPath: lineCounter

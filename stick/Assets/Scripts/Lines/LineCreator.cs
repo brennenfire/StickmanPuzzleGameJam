@@ -12,6 +12,10 @@ public class LineCreator : MonoBehaviour
     public float linePointsMinDistance;
     public float lineWidth;
     public Gradient lineColor;
+<<<<<<< Updated upstream
+=======
+    public float ink;
+>>>>>>> Stashed changes
 
     Line currentLine;
 
@@ -21,7 +25,12 @@ public class LineCreator : MonoBehaviour
 
     public bool usePhysics = false;
     
+<<<<<<< Updated upstream
     private void Start()
+=======
+
+    void Start()
+>>>>>>> Stashed changes
     {
         initialLineCounter = lineCounter;
         Instance = this;
@@ -63,6 +72,17 @@ public class LineCreator : MonoBehaviour
 
     void Draw()
     {
+<<<<<<< Updated upstream
+=======
+        if(ink <= 0)
+        {
+            EndDraw();
+        }
+
+        ink -= Time.deltaTime;
+        Line.Instance.usedInk += Time.deltaTime;
+
+>>>>>>> Stashed changes
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         if (!CheckCantDraw())
             EndDraw();
@@ -110,6 +130,10 @@ public class LineCreator : MonoBehaviour
         if (lines.Length > 0)
         {
             Destroy(lines[0].gameObject);
+<<<<<<< Updated upstream
+=======
+            ink += lines[0].usedInk;
+>>>>>>> Stashed changes
         }
 
     }
