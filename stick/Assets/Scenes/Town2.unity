@@ -1582,13 +1582,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - Well done buster!
-  - You've always been a natural but today you're on fire!
-  - I'm sure of it.
-  - Anyhow, I've got some chores to do so go ahead and explore the town for a while,
-    see if anything's new.
-  - Make sure you catch up with your friends and neighbors too.
-  - They are all lovely people!
+  - Everything else looks just as sour as my mood.
+  - I need something to cheer me up.
+  - I'll be back in a jiffy.
 --- !u!61 &274799971
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2416,8 +2412,7 @@ MonoBehaviour:
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
-  completedInspectionText: My bed. It's comfy and it's even got a nice flower beside
-    it. Too bad it's fake.
+  completedInspectionText: Maybe it's not that comfy.
   completedInspectionTextBox: {fileID: 405739074}
   item: {fileID: 0}
   isPickup: 0
@@ -4487,16 +4482,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - And so Joe awakened from his slumber.
-  - Hello Joe!
-  - It's time for an adventure!
-  - I'm sure you are excited but first I need to ask you something.
-  - Where's your table?
-  - You silly man.
-  - Atleast you can always draw another.
-  - Just use your special toothbrush to draw.
-  - After you are done with that inspect the room and make sure everything else is
-    in it's rightful place.
+  - And so he's awake yet again.
+  - Hey Joe.
+  - I'm not really feeling it today but I guess it's time for an adventure.
+  - I don't know why your table is gone again but forget it.
+  - Just go outside.
 --- !u!1001 &758314409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5887,75 +5877,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1001 &910510957
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 477649953}
-    m_Modifications:
-    - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4.02658
-      objectReference: {fileID: 0}
-    - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.3876665
-      objectReference: {fileID: 0}
-    - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.8700027
-      objectReference: {fileID: 0}
-    - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.3690033
-      objectReference: {fileID: 0}
-    - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1890531131870605873, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-      propertyPath: m_Name
-      value: DrawAreaTest
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
 --- !u!1 &918776505
 GameObject:
   m_ObjectHideFlags: 0
@@ -6384,9 +6305,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 3999956f16e64bc4bacbbd5335833ca2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1580543318}
-    - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 3999956f16e64bc4bacbbd5335833ca2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1787303688}
     - targetCorrespondingSourceObject: {fileID: -7552582706839291426, guid: 3999956f16e64bc4bacbbd5335833ca2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 95438815}
@@ -9688,7 +9606,7 @@ MonoBehaviour:
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
-  completedInspectionText: A portrait of two oddly chunky people.
+  completedInspectionText: It's only because of this that I can continue on today.
   completedInspectionTextBox: {fileID: 405739074}
   item: {fileID: 0}
   isPickup: 0
@@ -10140,11 +10058,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1787303688 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
-  m_PrefabInstance: {fileID: 910510957}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1806257057
 GameObject:
   m_ObjectHideFlags: 0
@@ -10950,7 +10863,7 @@ MonoBehaviour:
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
-  completedInspectionText: Dude, it's just a chair.
+  completedInspectionText: It's still just a chair.
   completedInspectionTextBox: {fileID: 405739074}
   item: {fileID: 0}
   isPickup: 0
