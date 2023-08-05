@@ -8,7 +8,6 @@ public class KillOnEnter : MonoBehaviour
     {
         if(collision.GetComponent<Player>() != null)
         {
-            LineCreator.Instance.ClearLines();
             Player.Instance.Reset();
         }
     }

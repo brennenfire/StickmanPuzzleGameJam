@@ -6,12 +6,12 @@ using UnityEngine;
 public class Options : MonoBehaviour
 {
     [SerializeField] TMP_Text showInk;
-    int fakeInk;
+    float fakeInk;
 
     void Update()
     {
-        fakeInk = (int)LineCreator.Instance.ink * 10;
-        showInk.SetText("ink: " + fakeInk.ToString());
+        fakeInk = LineCreator.Instance.ink * 10;
+        showInk.SetText("ink: " + fakeInk.ToString("f0"));
     }
 
     public void Quit()
