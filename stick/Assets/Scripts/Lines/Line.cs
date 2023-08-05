@@ -11,10 +11,18 @@ public class Line : MonoBehaviour
 	[HideInInspector] public List<Vector2> points = new List<Vector2>();
 	[HideInInspector] public int pointsCount = 0;
 
+	public static Line Instance;
+
 	float pointsMinDistance = .1f;
 	float circleColliderRadius;
+	public float usedInk;
 
-	public Vector2 GetLastPoint()
+    void Start()
+    {
+		Instance = this;    
+    }
+
+    public Vector2 GetLastPoint()
 	{
 		return (Vector2)lineRenderer.GetPosition(pointsCount - 1);
 	}
