@@ -102,7 +102,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 1154
+      y: 1512
       width: 350
       height: 512
     spriteID: d008b1ff5efd7394195206b78120b0e4
@@ -113,72 +113,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1154}
+    uvTransform: {x: 4, y: 1512}
     spritePosition: {x: 1646, y: 0}
-  - name: Chair
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 692
-      y: 847
-      width: 133
-      height: 285
-    spriteID: 1933a87c66f13b8489a686ec3b717308
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 692, y: 847}
-    spritePosition: {x: 1399, y: 34}
-  - name: DoorClosed
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 812
-      y: 4
-      width: 73
-      height: 505
-    spriteID: 467343b6a44d42f468772256c52818bf
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 812, y: 4}
-    spritePosition: {x: 1635, y: 0}
-  - name: Chandelier
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 847
-      width: 680
-      height: 299
-    spriteID: 6328a5fa0d8cc5d45bd50c25cd71e031
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 847}
-    spritePosition: {x: 719, y: 1201}
-  - name: Room
+  - name: Layer 2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -187,8 +124,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 800
-      height: 835
+      width: 1698
+      height: 1500
     spriteID: cfa3618a9fc6aaa4b8bb607dad4eef38
     spriteBone: []
     spriteOutline: []
@@ -275,42 +212,12 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: d008b1ff5efd7394195206b78120b0e4
     layerID: 3
-    mosaicPosition: {x: 4, y: 1154}
+    mosaicPosition: {x: 4, y: 1512}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Chair
-    spriteName: Chair
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 1933a87c66f13b8489a686ec3b717308
-    layerID: 5
-    mosaicPosition: {x: 692, y: 847}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: DoorClosed
-    spriteName: DoorClosed
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 467343b6a44d42f468772256c52818bf
-    layerID: 6
-    mosaicPosition: {x: 812, y: 4}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Chandelier
-    spriteName: Chandelier
-    isGroup: 0
-    parentIndex: -1
-    spriteID: 6328a5fa0d8cc5d45bd50c25cd71e031
-    layerID: 8
-    mosaicPosition: {x: 4, y: 847}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Room
-    spriteName: Room
+  - name: Layer 2
+    spriteName: Layer 2
     isGroup: 0
     parentIndex: -1
     spriteID: cfa3618a9fc6aaa4b8bb607dad4eef38
