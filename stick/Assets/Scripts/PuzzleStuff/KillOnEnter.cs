@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class KillOnEnter : MonoBehaviour
 {
-    [SerializeField] GameObject instantiatedObj;
+    [SerializeField] GameObject image;
+    GameObject instantiatedObj;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.GetComponent<Player>() != null)
         {
             LineCreator.Instance.ClearLines();
             Player.Instance.Reset();
+            instantiatedObj = Instantiate(image, transform.position, transform.rotation);
             StartCoroutine(WaitForTp());
         }
     }
