@@ -10,7 +10,7 @@ public class Narrator : MonoBehaviour
 
     [SerializeField] public Canvas NarratorCanvas;
     [SerializeField] public TMP_Text narratorText;
-    [SerializeField] float textSpeed;
+    [SerializeField] public float textSpeed;
 
     void Awake()
     {
@@ -19,10 +19,12 @@ public class Narrator : MonoBehaviour
         NarratorCanvas.enabled = false;    
     }
 
+    /*
     public void SetText(string text)
     {
         StartCoroutine(TypeLine(text));
     }
+    */
 
     public void EnableCanvas()
     {
@@ -34,14 +36,20 @@ public class Narrator : MonoBehaviour
         NarratorCanvas.enabled = false;
     }
 
+    /*
     IEnumerator TypeLine(string text)
     {
+        float messageTime = text.Length / 5;
+
         foreach (char c in text.ToCharArray())
         {
             narratorText.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
-        yield return new WaitForSeconds(1f);
+
+        yield return new WaitForSeconds(messageTime + 1f);
+
         narratorText.SetText(string.Empty);
     }
+    */
 }
