@@ -12,6 +12,8 @@ public class LineCreator : MonoBehaviour
     public float linePointsMinDistance;
     public float lineWidth;
     public Gradient lineColor;
+    public float ink;
+    float usedInk = 0;
 
     Line currentLine;
 
@@ -20,7 +22,8 @@ public class LineCreator : MonoBehaviour
     public int initialLineCounter = 0;
 
     public bool usePhysics = false;
-    
+
+
     private void Start()
     {
         initialLineCounter = lineCounter;
@@ -33,7 +36,7 @@ public class LineCreator : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(lineCounter == 0)
+            if (lineCounter == 0)
             {
                 return;
             }
@@ -63,6 +66,14 @@ public class LineCreator : MonoBehaviour
 
     void Draw()
     {
+        if (ink <= 0)
+        {
+            EndDraw();
+        }
+
+        ink -= Time.deltaTime;
+        usedInk += Time.deltaTime;
+
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         if (!CheckCantDraw())
             EndDraw();
@@ -101,16 +112,19 @@ public class LineCreator : MonoBehaviour
 
     public void ClearLines()
     {
+        // lineCounter nu e resetat cum trebuie
         lineCounter = initialLineCounter;
         var lines = FindObjectsOfType<Line>();
         /*
         foreach(var line in lines)
             Destroy(line.gameObject);
         */
+
         if (lines.Length > 0)
         {
             Destroy(lines[0].gameObject);
+            ink += usedInk;
+            usedInk = 0;
         }
-
     }
 }
