@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PositionReset : MonoBehaviour
 {
-    [SerializeField] int counter;
+    //[SerializeField] int counter;
+    [SerializeField] float ink;
     [SerializeField] bool physics;
 
     new Collider2D collider;
@@ -19,9 +20,10 @@ public class PositionReset : MonoBehaviour
         if(collision.GetComponent<Player>() != null)
         {
             collider.enabled = false;
-            LineCreator.Instance.lineCounter = counter;
+            //LineCreator.Instance.lineCounter = counter;
+            LineCreator.Instance.ink = ink;
             LineCreator.Instance.usePhysics = physics;
-            LineCreator.Instance.initialLineCounter = counter;
+            //LineCreator.Instance.initialLineCounter = counter;
         }
     }
 }
