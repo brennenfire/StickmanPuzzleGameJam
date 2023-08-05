@@ -1,8 +1,6 @@
 using Cinemachine;
 using UnityEngine;
 using UnityEditor;
-using Cinemachine.Editor;
-using UnityEditor.Search;
 
 public class CameraControlTrigger : MonoBehaviour
 {
