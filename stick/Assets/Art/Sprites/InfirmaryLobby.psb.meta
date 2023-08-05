@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 23debfbee5f85fb448c319a81bc27d03
+guid: 4689b057a412e584db81a1d41b0dc5e2
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 80
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -94,18 +94,18 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Door Opened
+  - name: Torch2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1469
-      y: 4
-      width: 277
-      height: 321
-    spriteID: 6f2f2a054e1cfaa46971c896d45f5019
+      x: 474
+      y: 380
+      width: 30
+      height: 102
+    spriteID: 2370e108a2e827d41967d0c8ab2361f4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -113,20 +113,20 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1469, y: 4}
-    spritePosition: {x: 175, y: 56}
-  - name: Door
+    uvTransform: {x: 474, y: 380}
+    spritePosition: {x: 96, y: 23}
+  - name: Torch
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1469
-      y: 333
-      width: 238
-      height: 270
-    spriteID: d4ad3db7805da8f45a8dfd75ced8e1ed
+      x: 474
+      y: 490
+      width: 29
+      height: 98
+    spriteID: 32b9ffb099c2feb479645ea7505b4101
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -134,9 +134,93 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 1469, y: 333}
-    spritePosition: {x: 175, y: 56}
-  - name: Infirmary
+    uvTransform: {x: 474, y: 490}
+    spritePosition: {x: 95, y: 23}
+  - name: Corner Webbing
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 372
+      y: 628
+      width: 114
+      height: 88
+    spriteID: 4b461038f9ece7a4ab979a44ab58be97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 372, y: 628}
+    spritePosition: {x: 259, y: 149}
+  - name: Desk
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 380
+      width: 462
+      height: 240
+    spriteID: 592e2b5601aacbc40b4799cbfa661cb5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 380}
+    spritePosition: {x: 42, y: 121}
+  - name: Bricks
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 628
+      width: 256
+      height: 159
+    spriteID: 1595a6f0a8e704246a249bc774a6ecf7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 628}
+    spritePosition: {x: 140, y: 149}
+  - name: Webbing
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 372
+      y: 724
+      width: 56
+      height: 57
+    spriteID: 9bc9be7d3796cb145875f8609a9347b0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 372, y: 724}
+    spritePosition: {x: 69, y: 180}
+  - name: Sign
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -145,9 +229,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 1457
-      height: 770
-    spriteID: e8b61c5e492328342809aa038fb46612
+      width: 469
+      height: 368
+    spriteID: d36efeb78854e1a41bd488fe3387fd48
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -157,6 +241,27 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
     spritePosition: {x: 0, y: 0}
+  - name: Chainr
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 268
+      y: 628
+      width: 96
+      height: 124
+    spriteID: c69dcc8ea9c8d824e94a9273670c463c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 268, y: 628}
+    spritePosition: {x: 220, y: 217}
   characterData:
     bones: []
     parts: []
@@ -227,33 +332,83 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Door Opened
-    spriteName: Door Opened
+  - name: Torch2
+    spriteName: Torch2
     isGroup: 0
     parentIndex: -1
-    spriteID: 6f2f2a054e1cfaa46971c896d45f5019
-    layerID: 6
-    mosaicPosition: {x: 1469, y: 4}
+    spriteID: 2370e108a2e827d41967d0c8ab2361f4
+    layerID: 10
+    mosaicPosition: {x: 474, y: 380}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Door
-    spriteName: Door
+  - name: Torch
+    spriteName: Torch
     isGroup: 0
     parentIndex: -1
-    spriteID: d4ad3db7805da8f45a8dfd75ced8e1ed
+    spriteID: 32b9ffb099c2feb479645ea7505b4101
+    layerID: 8
+    mosaicPosition: {x: 474, y: 490}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Corner Webbing
+    spriteName: Corner Webbing
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4b461038f9ece7a4ab979a44ab58be97
     layerID: 5
-    mosaicPosition: {x: 1469, y: 333}
+    mosaicPosition: {x: 372, y: 628}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Infirmary
-    spriteName: Infirmary
+  - name: Desk
+    spriteName: Desk
     isGroup: 0
     parentIndex: -1
-    spriteID: e8b61c5e492328342809aa038fb46612
+    spriteID: 592e2b5601aacbc40b4799cbfa661cb5
     layerID: 4
+    mosaicPosition: {x: 4, y: 380}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Bricks
+    spriteName: Bricks
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1595a6f0a8e704246a249bc774a6ecf7
+    layerID: 7
+    mosaicPosition: {x: 4, y: 628}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Webbing
+    spriteName: Webbing
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9bc9be7d3796cb145875f8609a9347b0
+    layerID: 6
+    mosaicPosition: {x: 372, y: 724}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Sign
+    spriteName: Sign
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d36efeb78854e1a41bd488fe3387fd48
+    layerID: 3
     mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Chainr
+    spriteName: Chainr
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c69dcc8ea9c8d824e94a9273670c463c
+    layerID: 2
+    mosaicPosition: {x: 268, y: 628}
     flatten: 0
     isImported: 1
     isVisible: 1
