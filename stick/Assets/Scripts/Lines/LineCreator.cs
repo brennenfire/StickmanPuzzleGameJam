@@ -13,7 +13,10 @@ public class LineCreator : MonoBehaviour
     public float lineWidth;
     public Gradient lineColor;
     public float ink;
+<<<<<<< Updated upstream
     float usedInk = 0;
+=======
+>>>>>>> Stashed changes
 
     Line currentLine;
 
@@ -22,9 +25,14 @@ public class LineCreator : MonoBehaviour
     public int initialLineCounter = 0;
 
     public bool usePhysics = false;
+<<<<<<< Updated upstream
 
 
     private void Start()
+=======
+    
+    void Start()
+>>>>>>> Stashed changes
     {
         initialLineCounter = lineCounter;
         Instance = this;
@@ -66,7 +74,11 @@ public class LineCreator : MonoBehaviour
 
     void Draw()
     {
+<<<<<<< Updated upstream
         if (ink <= 0)
+=======
+        if(ink <= 0)
+>>>>>>> Stashed changes
         {
             EndDraw();
         }
@@ -123,8 +135,12 @@ public class LineCreator : MonoBehaviour
         if (lines.Length > 0)
         {
             Destroy(lines[0].gameObject);
+<<<<<<< Updated upstream
             ink += usedInk;
             usedInk = 0;
+=======
+            ink += lines[0].usedInk;
+>>>>>>> Stashed changes
         }
     }
 }
