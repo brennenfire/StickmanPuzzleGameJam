@@ -13,6 +13,8 @@ public class Inspectable : MonoBehaviour
 
     static HashSet<Inspectable> inspectablesInRange = new HashSet<Inspectable>();
 
+    [SerializeField] SpriteRenderer doorOpen;
+
     [SerializeField] UnityEvent OnInspectionCompleted;
 
     [SerializeField, TextArea] string completedInspectionText;
@@ -22,10 +24,18 @@ public class Inspectable : MonoBehaviour
 
     public static IReadOnlyCollection<Inspectable> InspectablesInRange => inspectablesInRange;
 
+    private void Start()
+    {
+        
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            if (doorOpen != null)
+                doorOpen.enabled = true;
+
             Debug.Log("he here....");
             inspectablesInRange.Add(this);
             InspectablesInRangeChanged?.Invoke(true);
@@ -36,6 +46,9 @@ public class Inspectable : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            if (doorOpen != null)
+                doorOpen.enabled = false;
+
             if (inspectablesInRange.Remove(this))
             {
                 InspectablesInRangeChanged?.Invoke(inspectablesInRange.Any());
