@@ -860,6 +860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -1192,6 +1193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -1529,6 +1531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -1756,6 +1759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -2033,6 +2037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -2236,6 +2241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -2813,6 +2819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -2968,6 +2975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -3533,6 +3541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -3633,6 +3642,90 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 7.36, y: 7.36}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &687448403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 687448404}
+  - component: {fileID: 687448405}
+  m_Layer: 0
+  m_Name: Door Opened
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &687448404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687448403}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.89, y: -1.73, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 813910727}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &687448405
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687448403}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -661909055474019389, guid: 23debfbee5f85fb448c319a81bc27d03, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.77, y: 3.21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4020,6 +4113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -4484,6 +4578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -4809,6 +4904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -4915,6 +5011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -5194,6 +5291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -5285,6 +5383,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 625264672}
+  - {fileID: 687448404}
   m_Father: {fileID: 1898153113}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5300,6 +5399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 687448405}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -5340,7 +5440,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -4.064045, y: -0.75686646}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5351,7 +5451,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.57, y: 7.7}
+  m_Size: {x: 4.138397, y: 6.186267}
   m_EdgeRadius: 0
 --- !u!1 &859602256
 GameObject:
@@ -5451,6 +5551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -5807,6 +5908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -6706,6 +6808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -6804,6 +6907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -7052,6 +7156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -7105,6 +7210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -7256,6 +7362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -7459,6 +7566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -7609,6 +7717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -8457,6 +8566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -8891,6 +9001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -9058,6 +9169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -9324,6 +9436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -9475,6 +9588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -9678,6 +9792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -10037,6 +10152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -10703,6 +10819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -10808,6 +10925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
@@ -11206,6 +11324,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2492114050762889941, guid: c8e79a10eb6cc2d46867d6e3c9468dd8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -445
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492114050762889941, guid: c8e79a10eb6cc2d46867d6e3c9468dd8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -127
+      objectReference: {fileID: 0}
     - target: {fileID: 3594841771331066606, guid: c8e79a10eb6cc2d46867d6e3c9468dd8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -11293,6 +11419,10 @@ PrefabInstance:
     - target: {fileID: 6095083452584027820, guid: c8e79a10eb6cc2d46867d6e3c9468dd8, type: 3}
       propertyPath: m_Name
       value: '[CANVAS] CornersCanvas'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618347867523535008, guid: c8e79a10eb6cc2d46867d6e3c9468dd8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -110
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
