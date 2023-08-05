@@ -671,7 +671,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &95825264 stripped
 Transform:
@@ -760,7 +760,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -50}
 --- !u!1 &120306844
 GameObject:
@@ -3121,55 +3121,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &620934879
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 620934881}
-  - component: {fileID: 620934880}
-  m_Layer: 0
-  m_Name: '[SCENEMANAGER]'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &620934880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620934879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 249a8663618b58d4e9cb27466855009e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  changeTime: 0
-  autoChange: 0
-  sceneName: 
-  confirmationText: {fileID: 0}
-  confirmationCanvas: {fileID: 0}
---- !u!4 &620934881
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620934879}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.272962, y: 2.673535, z: 0.22044092}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &621251158
 GameObject:
   m_ObjectHideFlags: 0
@@ -5156,6 +5107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 807527841}
   - component: {fileID: 807527840}
+  - component: {fileID: 807527842}
   m_Layer: 0
   m_Name: PlayerHouse
   m_TagString: Untagged
@@ -5230,6 +5182,25 @@ Transform:
   m_Father: {fileID: 743391574}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &807527842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807527839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9571c982cae7182499a1e146c9933447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInspectionCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  completedInspectionText: Home sweet home.
+  completedInspectionTextBox: {fileID: 405739074}
+  item: {fileID: 0}
+  isPickup: 0
 --- !u!1 &813910725
 GameObject:
   m_ObjectHideFlags: 0
@@ -5561,7 +5532,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &880381561
 GameObject:
@@ -5676,7 +5647,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 658409604881528842, guid: 7a84fb89d8c216e4d96d552291b35ff7, type: 3}
       propertyPath: m_LocalScale.x
@@ -6630,7 +6601,7 @@ RectTransform:
   - {fileID: 630450087}
   - {fileID: 1860913823}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8986,8 +8957,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     lines:
-    - It's the treeeees! It's how they control our minds!!!
-    - Can't you see?!?!?!?
+    - It's the TREEEEES! It's how they control our minds!!!
+    - CAN'T YOU SEE?!?!?!?
     - Why is everyone so BLIND?!
 --- !u!1 &1580543316
 GameObject:
@@ -10069,7 +10040,7 @@ MonoBehaviour:
   OnInspectionCompleted:
     m_PersistentCalls:
       m_Calls: []
-  completedInspectionText: A cat is sitting on a branch of this tree. It looks content.
+  completedInspectionText: A cat is sitting on this tree. It looks content.
   completedInspectionTextBox: {fileID: 405739074}
   item: {fileID: 0}
   isPickup: 0
@@ -11653,6 +11624,10 @@ PrefabInstance:
       propertyPath: corners
       value: 
       objectReference: {fileID: 933637704}
+    - target: {fileID: 8488660774846252009, guid: 4ed3f2a9736fd4c418d9311459e19907, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 73
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11835,6 +11810,10 @@ PrefabInstance:
     - target: {fileID: 3109090281168415376, guid: c9e3bb600f5d1a44299a3c354abe73d4, type: 3}
       propertyPath: m_Name
       value: '[CANVAS] Inspection'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627973724094309781, guid: c9e3bb600f5d1a44299a3c354abe73d4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6786681724372683921, guid: c9e3bb600f5d1a44299a3c354abe73d4, type: 3}
       propertyPath: m_Pivot.x
