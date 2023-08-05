@@ -24,7 +24,16 @@ public class NarratorLines : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         collider.enabled = false;
-        TestDialogue();
+        if (narrator.isPlaying == false)
+        {
+            TestDialogue();
+            narrator.isPlaying = true;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
     }
 
     void TestDialogue()

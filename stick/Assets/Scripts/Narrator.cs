@@ -8,15 +8,17 @@ public class Narrator : MonoBehaviour
 {
     public static Narrator Instance { get; private set;}
 
-    [SerializeField] public Canvas NarratorCanvas;
+    [SerializeField] public Canvas narratorCanvas;
     [SerializeField] public TMP_Text narratorText;
     [SerializeField] public float textSpeed;
+    public bool isPlaying;
 
     void Awake()
     {
+        isPlaying = false;
         narratorText.SetText(string.Empty);
         Instance = this;
-        NarratorCanvas.enabled = false;    
+        narratorCanvas.enabled = false;    
     }
 
     /*
@@ -28,12 +30,14 @@ public class Narrator : MonoBehaviour
 
     public void EnableCanvas()
     {
-        NarratorCanvas.enabled = true;
+        isPlaying = true;
+        narratorCanvas.enabled = true;
     }
 
     internal void DisableCanvas()
     {
-        NarratorCanvas.enabled = false;
+        isPlaying = false;
+        narratorCanvas.enabled = false;
     }
 
     /*
