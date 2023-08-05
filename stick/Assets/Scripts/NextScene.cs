@@ -16,8 +16,11 @@ public class SceneTest : MonoBehaviour
 
     void Start()
     {
-        confirmationCanvas.enabled = false;
-        confirmationText.SetText(string.Empty);    
+        if (confirmationCanvas != null)
+        {
+            confirmationCanvas.enabled = false;
+            confirmationText.SetText(string.Empty);
+        }
     }
 
     void Update()
@@ -39,7 +42,10 @@ public class SceneTest : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.E)) 
             {
-                confirmationCanvas.enabled = true;
+                if (confirmationCanvas != null)
+                {
+                    confirmationCanvas.enabled = true;
+                }
                 confirmationText.SetText("Are you sure  you want to go inside?");
             }
         }
@@ -52,7 +58,10 @@ public class SceneTest : MonoBehaviour
 
     public void No()
     {
-        confirmationCanvas.enabled = false;
+        if (confirmationCanvas != null)
+        {
+            confirmationCanvas.enabled = false;
+        }
     }
 
     void ChangeScene()

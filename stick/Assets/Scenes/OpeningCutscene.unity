@@ -268,6 +268,8 @@ MonoBehaviour:
   changeTime: 3
   autoChange: 1
   sceneName: Test
+  confirmationText: {fileID: 0}
+  confirmationCanvas: {fileID: 0}
 --- !u!1 &1308371911
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,10 +501,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: you new to world whaaaaat?
+  m_text: Someone is calling out to you...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 298cfd693c8f9874f9d5cd916cc37804, type: 2}
+  m_sharedMaterial: {fileID: -652654730330838168, guid: 298cfd693c8f9874f9d5cd916cc37804, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -532,7 +534,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 2
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

@@ -103,7 +103,14 @@ public class LineCreator : MonoBehaviour
     {
         lineCounter = initialLineCounter;
         var lines = FindObjectsOfType<Line>();
+        /*
         foreach(var line in lines)
             Destroy(line.gameObject);
+        */
+        if (lines.Length > 0)
+        {
+            Destroy(lines[0].gameObject);
+        }
+
     }
 }
