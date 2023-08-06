@@ -542,6 +542,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[CANVAS] Intro'
       objectReference: {fileID: 0}
+    - target: {fileID: 8074269684328267497, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8793732315151394977, guid: e04a38d79b0e5f8499c292c18b4e24b3, type: 3}
       propertyPath: m_Color.b
       value: 1

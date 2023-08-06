@@ -11,7 +11,7 @@ public class Options : MonoBehaviour
     void Update()
     {
         fakeInk = LineCreator.Instance.ink * 10;
-        showInk.SetText("ink: " + fakeInk.ToString("f0"));
+        showInk.SetText(fakeInk.ToString("f0"));
     }
 
     public void Quit()
