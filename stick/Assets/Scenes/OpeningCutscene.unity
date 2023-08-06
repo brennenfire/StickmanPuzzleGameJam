@@ -267,7 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeTime: 3
   autoChange: 1
-  sceneName: Test
+  sceneName: Town
   confirmationText: {fileID: 0}
   confirmationCanvas: {fileID: 0}
 --- !u!1 &1308371911
