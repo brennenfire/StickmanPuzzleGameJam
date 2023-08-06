@@ -3323,7 +3323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeTime: 0
   autoChange: 0
-  sceneName: Test2
+  sceneName: Level
   confirmationText: {fileID: 772144964}
   confirmationCanvas: {fileID: 1130159018}
 --- !u!61 &625264674
